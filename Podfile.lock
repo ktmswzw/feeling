@@ -1,22 +1,29 @@
 PODS:
   - AIFlatSwitch (0.0.4)
   - Alamofire (3.0.1)
+  - MaterialKit (0.3.5)
   - SQLite.swift (1.0.0)
   - SwiftyJSON (2.3.1)
 
 DEPENDENCIES:
   - AIFlatSwitch (~> 0.0.4)
   - Alamofire (~> 3.0.1)
+  - MaterialKit (from `https://github.com/nghialv/MaterialKit.git`)
   - SQLite.swift (from `https://github.com/stephencelis/SQLite.swift.git`)
   - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
 
 EXTERNAL SOURCES:
+  MaterialKit:
+    :git: https://github.com/nghialv/MaterialKit.git
   SQLite.swift:
     :git: https://github.com/stephencelis/SQLite.swift.git
   SwiftyJSON:
     :git: https://github.com/SwiftyJSON/SwiftyJSON.git
 
 CHECKOUT OPTIONS:
+  MaterialKit:
+    :commit: 967d0d9bbf0ef86ebe5d013571c9c2a33e6cf0f6
+    :git: https://github.com/nghialv/MaterialKit.git
   SQLite.swift:
     :commit: c9d3082d1f5ddc2e55a792a8eb1a677b8a1b15f5
     :git: https://github.com/stephencelis/SQLite.swift.git
@@ -27,6 +34,7 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   AIFlatSwitch: 30b67439ed2d695fdb81ec5ae26f0b004fa83c66
   Alamofire: 2457e1b2e6c46bb05c3a598c542b7bfd08893775
+  MaterialKit: 6f1e9382f89593df768bc0c31ded9952a6d8ad46
   SQLite.swift: 3bb75f5a650f08673276bc6d3fb1de1b542b8f4d
   SwiftyJSON: 592b53bee5ef3dd9b3bebc6b9cb7ee35426ae8c3
 

@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>MaterialKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,17 +37,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>162B11DAD9009737CF4EA7E6D7E09551</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>1E6A98E4AFD4B6E42FEAECF3C937C28C</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>2B856D4E2FB3114BCFE7C67186F3661A</key>
+		<key>06E44B44450500272EEBF062EF3C2AF5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -52,7 +47,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>5FB0E1010439C9DF78C4E6E480FFE27E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>922DCCC80EB7F4B41371E0E130AF68D9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>BA367D4FAFCCF41E77D7DBAFE08E3578</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D55B4038C6F7F3F849A8BCB6287B752C</key>
 		<dict>
 			<key>primary</key>
 			<true/>

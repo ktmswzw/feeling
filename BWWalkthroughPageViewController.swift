@@ -24,6 +24,8 @@ SOFTWARE.
 
 
 import UIKit
+import QuartzCore
+import MaterialKit
 
 enum WalkthroughAnimationType:String{
     case Linear = "Linear"
@@ -43,6 +45,8 @@ enum WalkthroughAnimationType:String{
 
 class BWWalkthroughPageViewController: UIViewController, BWWalkthroughPage {
     
+    @IBOutlet var grass: MKImageView?
+    @IBOutlet var flower: MKImageView?
     private var animation:WalkthroughAnimationType = .Linear
     private var subsWeights:[CGPoint] = Array()
     private var notAnimatableViews:[Int] = [] // Array of views' tags that should not be animated during the scroll/transition
@@ -83,8 +87,24 @@ class BWWalkthroughPageViewController: UIViewController, BWWalkthroughPage {
                 subsWeights.append(speed)
             }
         }
-        
+//        
+//        flower?.layer.borderColor = UIColor.MKColor.Grey.CGColor
+////        flower?.layer.borderWidth = 0.0
+//        flower?.ripplePercent = 1.2
+//        flower?.rippleLocation = .Center
+//        grass?.layer.borderColor = UIColor.MKColor.Grey.CGColor
+//        grass?.ripplePercent = 1.2
+//        grass?.rippleLocation = .Center
+//        NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "animateImageRipple", userInfo: nil, repeats: false)
+
     }
+    
+    
+//    
+//    func animateImageRipple() {
+//        flower?.animateRipple()
+//        grass?.animateRipple()
+//    }
     
     func walkthroughDidScroll(position: CGFloat, offset: CGFloat) {
         

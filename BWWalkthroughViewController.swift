@@ -23,7 +23,8 @@ SOFTWARE.
 */
 
 import UIKit
-
+import QuartzCore
+import MaterialKit
 // MARK: - Protocols -
 
 /**
@@ -66,9 +67,9 @@ At the moment it's only used to perform custom animations on didScroll.
     @IBOutlet var pageControl:UIPageControl?
 //    @IBOutlet var nextButton:UIButton?
 //    @IBOutlet var prevButton:UIButton?
-    @IBOutlet var closeButton:UIButton?
+    @IBOutlet var closeButton:MKButton!
     
-    @IBOutlet var enterButton: UIButton?
+    @IBOutlet var enterButton: MKButton!
     
     var currentPage:Int{    // The index of the current page (readonly)
         get{
@@ -138,6 +139,25 @@ At the moment it's only used to perform custom animations on didScroll.
         enterButton?.hidden = true
         view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-0-[scrollview]-0-|", options:[], metrics: nil, views: ["scrollview":scrollview]))
         view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|-0-[scrollview]-0-|", options:[], metrics: nil, views: ["scrollview":scrollview]))
+        
+        
+        enterButton.cornerRadius = 30.0
+        enterButton.backgroundLayerCornerRadius = 30.0
+        enterButton.maskEnabled = false
+        enterButton.ripplePercent = 1.75
+        enterButton.rippleLocation = .Center
+        
+        enterButton.layer.shadowOpacity = 0.75
+        enterButton.layer.shadowRadius = 3.5
+        enterButton.layer.shadowColor = UIColor.blackColor().CGColor
+        enterButton.layer.shadowOffset = CGSize(width: 1.0, height: 2.5)
+        
+        
+        closeButton.backgroundLayerColor = UIColor.MKColor.Blue
+        closeButton.layer.shadowOpacity = 0.5
+        closeButton.layer.shadowRadius = 5.0
+        closeButton.layer.shadowColor = UIColor.blackColor().CGColor
+        closeButton.layer.shadowOffset = CGSize(width: 0, height: 2.5)
         
     }
     

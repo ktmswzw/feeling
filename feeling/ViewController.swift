@@ -10,10 +10,11 @@ import UIKit
 
 class ViewController: UIViewController,BWWalkthroughViewControllerDelegate {
 
-    override func viewDidLoad() {
+        override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-    }
+        
+            }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
