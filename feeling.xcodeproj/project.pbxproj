@@ -91,7 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				BF2CBDF11BF70DDB007B1BCC /* thirdParty */,
-				BF2CBDDB1BF705EB007B1BCC /* feeling */,
+				BF2CBDDB1BF705EB007B1BCC /* mvc */,
 				BF2CBDDA1BF705EB007B1BCC /* Products */,
 				A56C9FE0AFE54B74B8A45F88 /* Pods */,
 				0BB2D1E7113AFBF95C24D5C1 /* Frameworks */,
@@ -106,13 +106,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BF2CBDDB1BF705EB007B1BCC /* feeling */ = {
+		BF2CBDDB1BF705EB007B1BCC /* mvc */ = {
 			isa = PBXGroup;
 			children = (
 				BF2CBDF81BF70ECA007B1BCC /* controller */,
 				BF2CBDF71BF70EBB007B1BCC /* storyboard */,
 				BF2CBDF61BF70EAC007B1BCC /* recource */,
 			);
+			name = mvc;
 			path = feeling;
 			sourceTree = "<group>";
 		};

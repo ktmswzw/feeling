@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -18,27 +19,51 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mly-sT-gbK">
-                                <rect key="frame" x="271" y="285" width="59" height="30"/>
+                                <rect key="frame" x="533" y="562" width="47" height="30"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="59" id="NK9-5h-JhW"/>
+                                    <constraint firstAttribute="width" constant="40" id="UjB-L2-Ef4"/>
+                                    <constraint firstAttribute="width" constant="47" id="bLn-Wp-TuL"/>
+                                    <constraint firstAttribute="height" constant="30" id="iGG-MT-KBv"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="开启">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="UjB-L2-Ef4"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <action selector="showWalkthrough" destination="BYZ-38-t0r" eventType="touchUpInside" id="WKx-UM-qF3"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gs7-17-RSV">
+                                <rect key="frame" x="0.0" y="28" width="600" height="127"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.16862745100000001" green="0.19215686269999999" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="mly-sT-gbK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="851-r5-vwn"/>
-                            <constraint firstItem="mly-sT-gbK" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="lao-yc-qnK"/>
+                            <constraint firstItem="rEn-4f-GW2" firstAttribute="top" secondItem="mly-sT-gbK" secondAttribute="bottom" constant="8" id="0b9-ld-Hpi"/>
+                            <constraint firstItem="mly-sT-gbK" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Etn-ut-2mo"/>
+                            <constraint firstItem="rEn-4f-GW2" firstAttribute="top" secondItem="mly-sT-gbK" secondAttribute="bottom" constant="556" id="Jsu-0j-55S"/>
+                            <constraint firstItem="mly-sT-gbK" firstAttribute="top" secondItem="lh1-6s-jq4" secondAttribute="bottom" id="R46-yy-fYU"/>
+                            <constraint firstItem="mly-sT-gbK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="501" id="Rnm-tr-U77"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mly-sT-gbK" secondAttribute="trailing" id="d0g-ud-rxY"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Jsu-0j-55S"/>
+                                <exclude reference="Etn-ut-2mo"/>
+                                <exclude reference="R46-yy-fYU"/>
+                                <exclude reference="Rnm-tr-U77"/>
+                            </mask>
+                        </variation>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                 </viewController>

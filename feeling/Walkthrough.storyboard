@@ -48,7 +48,7 @@
                             </button>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" red="0.35201512143899716" green="1" blue="0.56477913919516576" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.16862745098039217" green="0.19215686274509805" blue="0.31764705882352939" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="1FA-xw-4iU" firstAttribute="centerX" secondItem="HKh-i7-USW" secondAttribute="centerX" id="3rK-L1-yec"/>
                             <constraint firstItem="1FA-xw-4iU" firstAttribute="top" secondItem="0zt-dB-T5K" secondAttribute="bottom" constant="8" symbolic="YES" id="BCw-lW-8ze"/>
@@ -143,7 +143,7 @@
                             </imageView>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" red="0.2673202711233964" green="0.7797774869109948" blue="0.14427221954113817" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.16862745100000001" green="0.19215686269999999" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="BSv-0w-ych" firstAttribute="centerX" secondItem="rf4-xe-7YL" secondAttribute="centerX" id="2l2-y1-eyT"/>
                             <constraint firstItem="DS2-Dj-fvU" firstAttribute="top" secondItem="bfU-aK-7Ny" secondAttribute="top" constant="179" id="5A2-Ff-VfL"/>
@@ -207,7 +207,7 @@
                             </imageView>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" red="0.22064334885125658" green="0.55679262090114157" blue="0.76656577225130884" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.16862745100000001" green="0.19215686269999999" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="PNH-be-ICR" firstAttribute="centerY" secondItem="kkh-Iu-Fdi" secondAttribute="centerY" id="WAA-i8-k7U"/>
                             <constraint firstItem="m6e-aI-VcE" firstAttribute="centerX" secondItem="kkh-Iu-Fdi" secondAttribute="centerX" id="d4X-pM-Ghh"/>
@@ -266,7 +266,7 @@
                             </imageView>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" red="1" green="0.54884152277344223" blue="0.54868108431903917" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.16862745100000001" green="0.19215686269999999" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="77x-UD-ZVf" firstAttribute="centerX" secondItem="M2M-wA-OAa" secondAttribute="centerX" id="KZg-M3-r9M"/>
                             <constraint firstItem="N7k-h1-Eau" firstAttribute="top" secondItem="fNB-nk-mDA" secondAttribute="bottom" constant="8" symbolic="YES" id="O6o-VP-V6y"/>
