@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>LTMorphingLabel.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>MaterialKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,7 +42,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>06E44B44450500272EEBF062EF3C2AF5</key>
+		<key>09C9FD07CFE549E92A885155AA38D8E6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0DCBD6C869DCC15AF62D43471CB4592C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -52,7 +62,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>922DCCC80EB7F4B41371E0E130AF68D9</key>
+		<key>A85FCE30B3BB77E774BE676F26489C8E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -62,7 +72,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D55B4038C6F7F3F849A8BCB6287B752C</key>
+		<key>FCFA998F1803C40A1D383006C75402B3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
