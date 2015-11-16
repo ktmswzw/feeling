@@ -26,6 +26,7 @@ SOFTWARE.
 import UIKit
 import QuartzCore
 import MaterialKit
+import LTMorphingLabel
 
 enum WalkthroughAnimationType:String{
     case Linear = "Linear"
@@ -43,10 +44,13 @@ enum WalkthroughAnimationType:String{
     }
 }
 
-class BWWalkthroughPageViewController: UIViewController, BWWalkthroughPage {
+class BWWalkthroughPageViewController: UIViewController, BWWalkthroughPage,LTMorphingLabelDelegate {
+    
+    @IBOutlet var zjLabel: LTMorphingLabel?
+    @IBOutlet var jmLabel: LTMorphingLabel?
+    @IBOutlet var childLabel: LTMorphingLabel!
     
     @IBOutlet var grass: MKImageView?
-    @IBOutlet var flower: MKImageView?
     private var animation:WalkthroughAnimationType = .Linear
     private var subsWeights:[CGPoint] = Array()
     private var notAnimatableViews:[Int] = [] // Array of views' tags that should not be animated during the scroll/transition
@@ -74,10 +78,46 @@ class BWWalkthroughPageViewController: UIViewController, BWWalkthroughPage {
     }
     
     // MARK: BWWalkthroughPage Implementation
+    
+    
+    override func viewWillAppear(animated: Bool) {
+        NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "animateLabelRipple", userInfo: nil, repeats: false)
+        
+        NSTimer.scheduledTimerWithTimeInterval(2.5, target: self, selector: "animateLabelRipple2", userInfo: nil, repeats: false)
+        
+        
+        NSTimer.scheduledTimerWithTimeInterval(4.5, target: self, selector: "animateLabelRipple3", userInfo: nil, repeats: false)
+    }
 
+    func animateLabelRipple() {
+        zjLabel?.text = "转角，期待"
+    }
+    
+    
+    func animateLabelRipple2() {
+        
+        zjLabel?.text = " "
+        jmLabel?.text = "再与你相见"
+    }
+    
+    
+    func animateLabelRipple3() {
+        childLabel?.text = "未来的你，一定健康快乐"
+    }
+//
+//    deinit {
+//        //zjLabel?.delegate = nil
+//    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.layer.masksToBounds = true
+        zjLabel?.delegate = self
+        jmLabel?.delegate = self
+        childLabel?.delegate = self
+        jmLabel?.morphingEffect = .Fall
+        
         subsWeights = Array()
         
         for v in view.subviews{
@@ -96,7 +136,6 @@ class BWWalkthroughPageViewController: UIViewController, BWWalkthroughPage {
 //        grass?.ripplePercent = 1.2
 //        grass?.rippleLocation = .Center
 //        NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "animateImageRipple", userInfo: nil, repeats: false)
-
     }
     
     

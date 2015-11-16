@@ -7,14 +7,45 @@
 //
 
 import UIKit
+import QuartzCore
+import MaterialKit
 
 class ViewController: UIViewController,BWWalkthroughViewControllerDelegate {
 
-        override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    override func viewDidLoad() {
+    super.viewDidLoad()
+    // Do any additional setup after loading the view, typically from a nib.
+
         
-            }
+        
+        // No border, shadow, floatingPlaceholderEnabled
+        username.layer.borderColor = UIColor.clearColor().CGColor
+        username.floatingPlaceholderEnabled = true
+        username.placeholder = "Email account"
+        username.rippleLayerColor = UIColor.MKColor.LightBlue
+        username.tintColor = UIColor.MKColor.Blue
+        username.backgroundColor = UIColor(hex: 0xE0E0E0)
+        
+        
+        password.layer.borderColor = UIColor.clearColor().CGColor
+        password.floatingPlaceholderEnabled = true
+        password.placeholder = "Email account"
+        password.rippleLayerColor = UIColor.MKColor.LightBlue
+        password.tintColor = UIColor.MKColor.Blue
+        password.backgroundColor = UIColor(hex: 0xE0E0E0)
+    
+    }
+    
+    @IBOutlet var username: MKTextField!
+    
+    @IBOutlet var password: MKTextField!
+    
+    @IBAction func closeKey(sender: AnyObject) {
+        username.resignFirstResponder();
+    }
+    @IBAction func closeKeyP(sender: AnyObject) {
+        password.resignFirstResponder();
+    }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)

@@ -99,6 +99,7 @@
 		BF2CBDDB1BF705EB007B1BCC /* mvc */ = {
 			isa = PBXGroup;
 			children = (
+				BFCCE5E91BFA039200108879 /* model */,
 				BF2CBDF81BF70ECA007B1BCC /* controller */,
 				BF2CBDF71BF70EBB007B1BCC /* storyboard */,
 				BF2CBDF61BF70EAC007B1BCC /* recource */,
@@ -173,6 +174,13 @@
 				BF2CBE021BF70F48007B1BCC /* cloud3@2x.png */,
 			);
 			name = thirdPartyImages;
+			sourceTree = "<group>";
+		};
+		BFCCE5E91BFA039200108879 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

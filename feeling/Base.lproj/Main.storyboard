@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,9 +18,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mly-sT-gbK">
-                                <rect key="frame" x="277" y="550" width="47" height="30"/>
+                                <rect key="frame" x="533" y="550" width="47" height="30"/>
                                 <animations/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="4ej-R2-3ca"/>
+                                    <constraint firstAttribute="width" constant="47" id="8Fs-lX-c7w"/>
                                     <constraint firstAttribute="width" constant="47" id="epe-b0-77f"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -27,19 +30,66 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="epe-b0-77f"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <action selector="showWalkthrough" destination="BYZ-38-t0r" eventType="touchUpInside" id="WKx-UM-qF3"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="账号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bSq-gg-MTB" customClass="MKTextField" customModule="MaterialKit">
+                                <rect key="frame" x="217" y="191" width="166" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="6Sm-Tu-LVX"/>
+                                    <constraint firstAttribute="width" constant="166" id="gVU-Sf-i7R"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="closeKey:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="1kO-yK-I2d"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ins-2P-k7k" customClass="MKTextField" customModule="MaterialKit">
+                                <rect key="frame" x="217" y="285" width="166" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="4nQ-MT-G3x"/>
+                                    <constraint firstAttribute="width" constant="166" id="hbS-6V-nM9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="closeKeyP:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="hJK-DW-ZL1"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.16862745100000001" green="0.19215686269999999" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="dzU-6Z-nEP" firstAttribute="top" secondItem="mly-sT-gbK" secondAttribute="bottom" constant="20" id="0HA-Xm-2HI"/>
+                            <constraint firstItem="bSq-gg-MTB" firstAttribute="centerX" secondItem="ins-2P-k7k" secondAttribute="centerX" id="7eO-SM-WrC"/>
+                            <constraint firstItem="ins-2P-k7k" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ixb-Cu-e3l"/>
+                            <constraint firstItem="ins-2P-k7k" firstAttribute="top" secondItem="bSq-gg-MTB" secondAttribute="bottom" constant="64" id="Rcc-6f-5f9"/>
                             <constraint firstItem="mly-sT-gbK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="URa-Zv-IHC"/>
+                            <constraint firstItem="ins-2P-k7k" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="WdV-3t-Q53"/>
                             <constraint firstAttribute="bottom" secondItem="mly-sT-gbK" secondAttribute="bottom" constant="20" symbolic="YES" id="mYq-vB-p6Q"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mly-sT-gbK" secondAttribute="trailing" id="pQU-cy-vlg"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="URa-Zv-IHC"/>
+                                <exclude reference="mYq-vB-p6Q"/>
+                            </mask>
+                        </variation>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <connections>
+                        <outlet property="password" destination="ins-2P-k7k" id="uyt-a4-ZUQ"/>
+                        <outlet property="username" destination="bSq-gg-MTB" id="T60-or-S9L"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
