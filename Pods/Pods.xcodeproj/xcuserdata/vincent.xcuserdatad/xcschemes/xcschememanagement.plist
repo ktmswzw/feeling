@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>CryptoSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>LTMorphingLabel.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,7 +47,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>09C9FD07CFE549E92A885155AA38D8E6</key>
+		<key>0A8B6C1EC1AF0C7557F346E94ABF4E56</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -62,7 +67,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A85FCE30B3BB77E774BE676F26489C8E</key>
+		<key>908DCBC235FEFE6141F51FCD65DFBB73</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>952FE1EB61CA49FEC151B1763B93E741</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -72,7 +82,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FCFA998F1803C40A1D383006C75402B3</key>
+		<key>FFBCCCFEA45C3364700BD4E3FE0EEC5B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -1,6 +1,7 @@
 PODS:
   - AIFlatSwitch (0.0.4)
   - Alamofire (3.0.1)
+  - CryptoSwift (0.1.1)
   - LTMorphingLabel (0.0.9)
   - MaterialKit (0.3.5)
   - SQLite.swift (1.0.0)
@@ -9,12 +10,16 @@ PODS:
 DEPENDENCIES:
   - AIFlatSwitch (~> 0.0.4)
   - Alamofire (~> 3.0.1)
+  - CryptoSwift (from `https://github.com/krzyzanowskim/CryptoSwift`, branch `master`)
   - LTMorphingLabel (from `https://github.com/lexrus/LTMorphingLabel.git`)
   - MaterialKit (from `https://github.com/nghialv/MaterialKit.git`)
   - SQLite.swift (from `https://github.com/stephencelis/SQLite.swift.git`)
   - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
 
 EXTERNAL SOURCES:
+  CryptoSwift:
+    :branch: master
+    :git: https://github.com/krzyzanowskim/CryptoSwift
   LTMorphingLabel:
     :git: https://github.com/lexrus/LTMorphingLabel.git
   MaterialKit:
@@ -25,6 +30,9 @@ EXTERNAL SOURCES:
     :git: https://github.com/SwiftyJSON/SwiftyJSON.git
 
 CHECKOUT OPTIONS:
+  CryptoSwift:
+    :commit: f23720f6b398169d7407ca8b2c4a590238128686
+    :git: https://github.com/krzyzanowskim/CryptoSwift
   LTMorphingLabel:
     :commit: 1917ab7ce47764f0a7ef0dbbf7296699a5d77844
     :git: https://github.com/lexrus/LTMorphingLabel.git
@@ -41,6 +49,7 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   AIFlatSwitch: 30b67439ed2d695fdb81ec5ae26f0b004fa83c66
   Alamofire: 2457e1b2e6c46bb05c3a598c542b7bfd08893775
+  CryptoSwift: 80b014431f6ef249acb6004efc93a8f65f5f7781
   LTMorphingLabel: 4235a403f99f0e0e503389da660e0fec324549d9
   MaterialKit: 6f1e9382f89593df768bc0c31ded9952a6d8ad46
   SQLite.swift: 3bb75f5a650f08673276bc6d3fb1de1b542b8f4d

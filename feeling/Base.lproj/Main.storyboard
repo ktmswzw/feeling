@@ -5,10 +5,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="feeling" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="feeling" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kw4-jy-ZNy"/>
                         <viewControllerLayoutGuide type="bottom" id="dzU-6Z-nEP"/>
@@ -32,52 +32,6 @@
                                 <connections>
                                     <action selector="showWalkthrough" destination="BYZ-38-t0r" eventType="touchUpInside" id="WKx-UM-qF3"/>
                                 </connections>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="账号" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bSq-gg-MTB" customClass="MKTextField" customModule="MaterialKit">
-                                <rect key="frame" x="217" y="180" width="166" height="40"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="5o6-HR-d1S"/>
-                                    <constraint firstAttribute="width" constant="166" id="f73-MB-5WE"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
-                                <connections>
-                                    <action selector="closeKey:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="1kO-yK-I2d"/>
-                                </connections>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ins-2P-k7k" customClass="MKTextField" customModule="MaterialKit">
-                                <rect key="frame" x="217" y="280" width="166" height="40"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="190-We-czk"/>
-                                    <constraint firstAttribute="width" constant="166" id="azh-up-0jd"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
-                                <connections>
-                                    <action selector="closeKeyP:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="hJK-DW-ZL1"/>
-                                </connections>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tje-Wd-deX" customClass="MKButton" customModule="MaterialKit">
-                                <rect key="frame" x="270" y="360" width="60" height="33"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.094117647060000004" green="0.59999999999999998" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="Gbp-dD-7Rn"/>
-                                    <constraint firstAttribute="width" constant="60" id="d6C-jA-47v"/>
-                                    <constraint firstAttribute="height" constant="33" id="tUt-bv-19c"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="登陆">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="Gbp-dD-7Rn"/>
-                                    </mask>
-                                </variation>
                             </button>
                             <view contentMode="scaleToFill" restorationIdentifier="thirdView" translatesAutoresizingMaskIntoConstraints="NO" id="Qgo-7l-I7N">
                                 <rect key="frame" x="204" y="539" width="192" height="53"/>
@@ -151,6 +105,56 @@
                                     </mask>
                                 </variation>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tje-Wd-deX" customClass="MKButton" customModule="MaterialKit">
+                                <rect key="frame" x="270" y="360" width="60" height="60"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.094117647060000004" green="0.59999999999999998" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="Gbp-dD-7Rn"/>
+                                    <constraint firstAttribute="width" constant="60" id="d6C-jA-47v"/>
+                                    <constraint firstAttribute="height" constant="60" id="tUt-bv-19c"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="登陆">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Gbp-dD-7Rn"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gst-KI-yrs"/>
+                                    <segue destination="xAk-si-U21" kind="show" identifier="login" id="bS6-kG-R7O"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="账号" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bSq-gg-MTB" customClass="MKTextField" customModule="MaterialKit">
+                                <rect key="frame" x="217" y="180" width="166" height="40"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="5o6-HR-d1S"/>
+                                    <constraint firstAttribute="width" constant="166" id="f73-MB-5WE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <action selector="closeKey:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="1kO-yK-I2d"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ins-2P-k7k" customClass="MKTextField" customModule="MaterialKit">
+                                <rect key="frame" x="217" y="280" width="166" height="40"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="190-We-czk"/>
+                                    <constraint firstAttribute="width" constant="166" id="azh-up-0jd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                <connections>
+                                    <action selector="closeKeyP:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="hJK-DW-ZL1"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.16862745100000001" green="0.19215686269999999" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -186,6 +190,7 @@
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
+                        <outlet property="loginButton" destination="tje-Wd-deX" id="nHg-zR-MxF"/>
                         <outlet property="password" destination="ins-2P-k7k" id="uyt-a4-ZUQ"/>
                         <outlet property="username" destination="bSq-gg-MTB" id="T60-or-S9L"/>
                     </connections>
@@ -193,6 +198,26 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="305" y="375"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="1IH-cD-FDT">
+            <objects>
+                <viewController id="xAk-si-U21" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gft-12-cWL"/>
+                        <viewControllerLayoutGuide type="bottom" id="d1B-Mc-ahl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="amv-DH-1kg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" red="0.12549019607843137" green="0.14117647058823529" blue="0.25098039215686274" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TEY-NX-MSR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="989" y="375"/>
         </scene>
     </scenes>
     <resources>
