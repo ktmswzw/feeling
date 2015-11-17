@@ -33,6 +33,9 @@ class ViewController: UIViewController,BWWalkthroughViewControllerDelegate {
         password.rippleLayerColor = UIColor.MKColor.LightBlue
         password.tintColor = UIColor.MKColor.Blue
         password.backgroundColor = UIColor(hex: 0xE0E0E0)
+        
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Backgroup.png")!)
+        //self.view.backgroundColor = UIColor(patternImage: UIImage?(named: "Backgroup.png"))
     
     }
     

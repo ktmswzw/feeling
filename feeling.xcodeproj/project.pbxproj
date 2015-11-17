@@ -23,6 +23,13 @@
 		BF4893C81BF7738A00DF6EE5 /* father.png in Resources */ = {isa = PBXBuildFile; fileRef = BF4893C51BF7738A00DF6EE5 /* father.png */; };
 		BF4893D11BF77A6900DF6EE5 /* clover.png in Resources */ = {isa = PBXBuildFile; fileRef = BF4893CF1BF77A6900DF6EE5 /* clover.png */; };
 		BF4893D51BF77C7500DF6EE5 /* clover2.png in Resources */ = {isa = PBXBuildFile; fileRef = BF4893D41BF77C7500DF6EE5 /* clover2.png */; };
+		BF9F80B31BFB1E86003A12FB /* Backgroup.png in Resources */ = {isa = PBXBuildFile; fileRef = BF9F80B21BFB1E86003A12FB /* Backgroup.png */; };
+		BFA592131BFA2F93002F467E /* login_Alipay.png in Resources */ = {isa = PBXBuildFile; fileRef = BFA5920D1BFA2F93002F467E /* login_Alipay.png */; };
+		BFA592141BFA2F93002F467E /* login_password.png in Resources */ = {isa = PBXBuildFile; fileRef = BFA5920E1BFA2F93002F467E /* login_password.png */; };
+		BFA592151BFA2F93002F467E /* login_QQ.png in Resources */ = {isa = PBXBuildFile; fileRef = BFA5920F1BFA2F93002F467E /* login_QQ.png */; };
+		BFA592161BFA2F93002F467E /* login_sina.png in Resources */ = {isa = PBXBuildFile; fileRef = BFA592101BFA2F93002F467E /* login_sina.png */; };
+		BFA592171BFA2F93002F467E /* login_username.png in Resources */ = {isa = PBXBuildFile; fileRef = BFA592111BFA2F93002F467E /* login_username.png */; };
+		BFA592181BFA2F93002F467E /* login_wechat.png in Resources */ = {isa = PBXBuildFile; fileRef = BFA592121BFA2F93002F467E /* login_wechat.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +53,13 @@
 		BF4893C51BF7738A00DF6EE5 /* father.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = father.png; sourceTree = "<group>"; };
 		BF4893CF1BF77A6900DF6EE5 /* clover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clover.png; sourceTree = "<group>"; };
 		BF4893D41BF77C7500DF6EE5 /* clover2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clover2.png; sourceTree = "<group>"; };
+		BF9F80B21BFB1E86003A12FB /* Backgroup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Backgroup.png; sourceTree = "<group>"; };
+		BFA5920D1BFA2F93002F467E /* login_Alipay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_Alipay.png; sourceTree = "<group>"; };
+		BFA5920E1BFA2F93002F467E /* login_password.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_password.png; sourceTree = "<group>"; };
+		BFA5920F1BFA2F93002F467E /* login_QQ.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_QQ.png; sourceTree = "<group>"; };
+		BFA592101BFA2F93002F467E /* login_sina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_sina.png; sourceTree = "<group>"; };
+		BFA592111BFA2F93002F467E /* login_username.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_username.png; sourceTree = "<group>"; };
+		BFA592121BFA2F93002F467E /* login_wechat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_wechat.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +173,12 @@
 		BF2CBDFA1BF70F24007B1BCC /* logo */ = {
 			isa = PBXGroup;
 			children = (
+				BFA5920D1BFA2F93002F467E /* login_Alipay.png */,
+				BFA5920E1BFA2F93002F467E /* login_password.png */,
+				BFA5920F1BFA2F93002F467E /* login_QQ.png */,
+				BFA592101BFA2F93002F467E /* login_sina.png */,
+				BFA592111BFA2F93002F467E /* login_username.png */,
+				BFA592121BFA2F93002F467E /* login_wechat.png */,
 			);
 			name = logo;
 			sourceTree = "<group>";
@@ -166,6 +186,7 @@
 		BF2CBDFB1BF70F2B007B1BCC /* thirdPartyImages */ = {
 			isa = PBXGroup;
 			children = (
+				BF9F80B21BFB1E86003A12FB /* Backgroup.png */,
 				BF4893D41BF77C7500DF6EE5 /* clover2.png */,
 				BF4893CF1BF77A6900DF6EE5 /* clover.png */,
 				BF4893C51BF7738A00DF6EE5 /* father.png */,
@@ -246,13 +267,20 @@
 			files = (
 				BF2CBDE71BF705EB007B1BCC /* Assets.xcassets in Resources */,
 				BF2CBDE21BF705EB007B1BCC /* Main.storyboard in Resources */,
+				BFA592141BFA2F93002F467E /* login_password.png in Resources */,
+				BFA592181BFA2F93002F467E /* login_wechat.png in Resources */,
 				BF2CBE051BF70F48007B1BCC /* img3@2x.png in Resources */,
 				BF2CBE0A1BF70F48007B1BCC /* cloud3@2x.png in Resources */,
+				BFA592171BFA2F93002F467E /* login_username.png in Resources */,
+				BFA592151BFA2F93002F467E /* login_QQ.png in Resources */,
 				BF4893D11BF77A6900DF6EE5 /* clover.png in Resources */,
 				BF4893D51BF77C7500DF6EE5 /* clover2.png in Resources */,
+				BFA592161BFA2F93002F467E /* login_sina.png in Resources */,
 				BF2CBE111BF71456007B1BCC /* Walkthrough.storyboard in Resources */,
 				BF2CBE091BF70F48007B1BCC /* cloud1@2x.png in Resources */,
 				BF4893C81BF7738A00DF6EE5 /* father.png in Resources */,
+				BF9F80B31BFB1E86003A12FB /* Backgroup.png in Resources */,
+				BFA592131BFA2F93002F467E /* login_Alipay.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
