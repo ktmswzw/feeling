@@ -1,7 +1,7 @@
 platform :ios, '9.0'
 use_frameworks!
 
-pod 'CryptoSwift', :git => "https://github.com/krzyzanowskim/CryptoSwift", :branch => "master"
+pod 'ActionButton'
 pod 'LTMorphingLabel', git: 'https://github.com/lexrus/LTMorphingLabel.git'
 pod 'MaterialKit', git: 'https://github.com/nghialv/MaterialKit.git'
 pod 'AIFlatSwitch', '~> 0.0.4'

@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'C6599354220D836012C42AB0'
-               BlueprintName = 'AIFlatSwitch'
+               BlueprintIdentifier = '23F9503B2C920BD08BAD1354'
+               BlueprintName = 'ActionButton'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'AIFlatSwitch.framework'>
+               BuildableName = 'ActionButton.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

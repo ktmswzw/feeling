@@ -9,12 +9,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Alamofire.xcscheme</key>
+		<key>ActionButton.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>CryptoSwift.xcscheme</key>
+		<key>Alamofire.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -47,12 +47,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0A8B6C1EC1AF0C7557F346E94ABF4E56</key>
+		<key>0DCBD6C869DCC15AF62D43471CB4592C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>0DCBD6C869DCC15AF62D43471CB4592C</key>
+		<key>19BE751B5D06695D62E7EA0CE71113BA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>38D9614B146D4C1B0E115CBA919C200A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -67,22 +72,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>908DCBC235FEFE6141F51FCD65DFBB73</key>
+		<key>916EBE28D617D92642FEDBA1890FCC08</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>952FE1EB61CA49FEC151B1763B93E741</key>
+		<key>A7AF6E763314D4D05792E29A5B9ABDE6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>BA367D4FAFCCF41E77D7DBAFE08E3578</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FFBCCCFEA45C3364700BD4E3FE0EEC5B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

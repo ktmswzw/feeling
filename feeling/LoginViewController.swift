@@ -10,20 +10,40 @@
 import UIKit
 import QuartzCore
 import MaterialKit
-import CryptoSwift
 import Alamofire
 import SwiftyJSON
+import ActionButton
 
-class LoginViewController: UIViewController,BWWalkthroughViewControllerDelegate {
+class LoginViewController: UIViewController,BWWalkthroughViewControllerDelegate{
     
-//    let key: [UInt8] = [56, 118, 37, 51, 125, 78, 103, 107, 119, 40, 74, 88, 117, 112, 123, 75]
-//    
-//    let iv: [UInt8] = [69, 122, 99, 87, 83, 112, 110, 65, 54, 109, 107, 89, 73, 122, 74, 49]
+    
+    var actionButton: ActionButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        
+        
+        let wechatLogin = ActionButtonItem(title: "微信登录", image: UIImage(named: "wechat")!)
+        wechatLogin.action = { item in self.showWalkthrough()  }
+        
+        let qqLogin = ActionButtonItem(title: "QQ登录", image: UIImage(named: "qq")!)
+        qqLogin.action = { item in self.showWalkthrough() }
+        
+        
+        let weiboLogin = ActionButtonItem(title: "微博登录", image: UIImage(named: "weibo")!)
+        weiboLogin.action = { item in self.showWalkthrough() }
+        
+        
+        let taobaoLogin = ActionButtonItem(title: "淘宝登录", image: UIImage(named: "taobao")!)
+        taobaoLogin.action = { item in self.showWalkthrough() }
+        
+        actionButton = ActionButton(attachedToView: self.view, items: [wechatLogin, qqLogin, weiboLogin, taobaoLogin])
+        actionButton.action = { button in button.toggleMenu() }
+        actionButton.setTitle("?", forState: .Normal)
+        
+        actionButton.backgroundColor = UIColor(red: 0.0/255.0, green: 255.0/255.0, blue: 128.0/255.0, alpha:0.703852370689655)
         
         
         // No border, shadow, floatingPlaceholderEnabled
@@ -63,6 +83,7 @@ class LoginViewController: UIViewController,BWWalkthroughViewControllerDelegate 
     
     @IBOutlet var loginButton: MKButton!
     
+    @IBOutlet var centerView: UIView!
     
     @IBAction func closeKey(sender: AnyObject) {
         username.resignFirstResponder();
@@ -84,50 +105,64 @@ class LoginViewController: UIViewController,BWWalkthroughViewControllerDelegate 
             userDefaults.synchronize()
         }
     }
+    func bytes2String(array:[UInt8]) -> String {
+        return (NSString(data: NSData(bytes: array, length: array.count), encoding: NSUTF8StringEncoding) ?? "") as String
+    }
+
+    func asciiCArrayToSwiftString(cString:UInt8...) -> String
+    {
+        var swiftString = String()            // The Swift String to be Returned is Intialized to an Empty String
+        var workingCharacter:UnicodeScalar = UnicodeScalar(UInt8(cString[0]))
+        let count:Int = cString.count
+
+        for var i:Int = 0; i < count; i++
+        {
+            workingCharacter = UnicodeScalar(UInt8(cString[i])) // Convert the Int8 Character to a Unicode Scalar
+            swiftString.append(workingCharacter)             // Append the Unicode Scalar
+
+        }
+        return swiftString                     // Return the Swift String
+    }
     
     
     @IBAction func login(sender: AnyObject) {
         
         if username.text != "" || password.text != ""
         {
+//            
+//            Swift
+//            
+//            let plainString = "foo"
+//            Encoding
+//            
+//            let plainData = plainString.dataUsingEncoding(NSUTF8StringEncoding)
+//            let base64String = plainData?.base64EncodedStringWithOptions(.allZeros)
+//            println(base64String!) // Zm9v
+//            Decoding
+//            
+//            let decodedData = NSData(base64EncodedString: base64String!, options: .allZeros)
+//            let decodedString = NSString(data: decodedData, encoding: NSUTF8StringEncoding)
+//            println(decodedString) // foo
             
-//            let plaintext: [UInt8] = [123, 10, 32, 32]
-//
-//            let encryptedU = try! AES(key: key, iv: iv, blockMode: .CFB).encrypt(Array(username.text!.utf8))
-//            let encryptedP = try! AES(key: key, iv: iv, blockMode: .CFB).encrypt(Array(password.text!.utf8))
-            
-//            print(Array(password.text!.utf8))
-//            
-//            let encryptedU = try! AES(key: key, iv: iv, blockMode: .CFB).encrypt(plaintext)
-//            let encryptedP = try! AES(key: key, iv: iv, blockMode: .CFB).encrypt(plaintext)
-//            
-//            
-//            print(NSString(bytes: encryptedU, length: encryptedU.count, encoding: NSUTF8StringEncoding))
-//            
-//            print(NSString(bytes: encryptedP, length: encryptedP.count, encoding: NSUTF8StringEncoding))
-//            
-//            let usernameEncrypted = NSString(bytes: encryptedU, length: encryptedU.count, encoding: NSUTF8StringEncoding)
-//            let passwordEncrypted = NSString(bytes: encryptedP, length: encryptedP.count, encoding: NSUTF8StringEncoding)
-//            let decrypted = try! aes.decrypt(passwordEncrypted, padding: nil)
-//            self.performSegueWithIdentifier("login", sender: self)
-//            Alamofire.request(.GET, "http://192.168.137.1:8080/login/autoLoad", parameters: ["username": usernameEncrypted!,"password":passwordEncrypted!]).responseJSON { response in
-//                    print(response.request)  // original URL request
-//                    print(response.response) // URL response
-//                    print(response.data)     // server data
-//                    print(response.result)   // result of response serialization
-//
-//                    if let json = response.result.value {
-//                        let myJosn = JSON(json)
-//                        print("JSON: \(json)")
-//                        if let successful = myJosn.dictionary!["successful"]!.bool {
-//                            if successful {
-//                                self.performSegueWithIdentifier("login", sender: self)
-//                            }
-//                        }
-//
-//                    }
-//            }
-            
+            let userNameText = NSData.AES256EncryptWithPlainText(username.text)
+            let passwordText = NSData.AES256EncryptWithPlainText(password.text)
+            Alamofire.request(.GET, "http://192.168.137.1:8080/login/autoLoad", parameters: ["username": userNameText,"password":passwordText]).responseJSON { response in
+                if let json = response.result.value {
+                    let myJosn = JSON(json)
+                    print("JSON: \(json)")
+                    if let successful = myJosn.dictionary!["successful"]!.bool {
+                        if successful {
+                            self.performSegueWithIdentifier("login", sender: self)
+                        }
+                    }
+                    else
+                    {
+                        let refreshAlert = UIAlertController(title: "错误", message: myJosn.dictionary!["msg"]!.string, preferredStyle: UIAlertControllerStyle.ActionSheet)
+                        refreshAlert.addAction(UIAlertAction(title: "确认", style: .Cancel, handler: { (action: UIAlertAction!) in }))
+                        self.presentViewController(refreshAlert, animated: true, completion: nil)
+                    }
+                }
+            }
         }
         else
         {

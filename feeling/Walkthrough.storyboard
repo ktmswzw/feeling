@@ -243,11 +243,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img3.png" translatesAutoresizingMaskIntoConstraints="NO" id="PNH-be-ICR">
-                                <rect key="frame" x="277" y="276" width="47" height="47"/>
-                                <animations/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="开启超越时空的触动" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m6e-aI-VcE">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="开启超越时空的触动" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m6e-aI-VcE">
                                 <rect key="frame" x="20" y="183" width="560" height="24"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
@@ -260,10 +256,6 @@
                         <constraints>
                             <constraint firstAttribute="leadingMargin" secondItem="m6e-aI-VcE" secondAttribute="leading" id="0pl-YW-tar"/>
                             <constraint firstAttribute="trailingMargin" secondItem="m6e-aI-VcE" secondAttribute="trailing" id="PW6-eU-iyP"/>
-                            <constraint firstItem="m6e-aI-VcE" firstAttribute="centerX" secondItem="PNH-be-ICR" secondAttribute="centerX" id="QGJ-Rj-dSG"/>
-                            <constraint firstItem="PNH-be-ICR" firstAttribute="centerY" secondItem="kkh-Iu-Fdi" secondAttribute="centerY" id="pcc-Ov-PGS"/>
-                            <constraint firstItem="PNH-be-ICR" firstAttribute="centerX" secondItem="kkh-Iu-Fdi" secondAttribute="centerX" id="wWk-VV-hUF"/>
-                            <constraint firstItem="PNH-be-ICR" firstAttribute="top" secondItem="m6e-aI-VcE" secondAttribute="bottom" constant="69" id="xJA-Be-faA"/>
                         </constraints>
                     </view>
                     <userDefinedRuntimeAttributes>
@@ -321,7 +313,7 @@
                                     <constraint firstAttribute="height" constant="35" id="Un4-c1-yEt"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N7k-h1-Eau" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
@@ -373,6 +365,5 @@
         <image name="cloud3.png" width="64" height="35"/>
         <image name="clover.png" width="512" height="512"/>
         <image name="clover2.png" width="652" height="916"/>
-        <image name="img3.png" width="47" height="47"/>
     </resources>
 </document>
