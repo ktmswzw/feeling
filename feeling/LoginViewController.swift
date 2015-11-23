@@ -42,40 +42,25 @@ class LoginViewController: UIViewController,BWWalkthroughViewControllerDelegate{
         actionButton = ActionButton(attachedToView: self.view, items: [wechatLogin, qqLogin, weiboLogin, taobaoLogin])
         actionButton.action = { button in button.toggleMenu() }
         actionButton.setTitle("?", forState: .Normal)
-        
         actionButton.backgroundColor = UIColor(red: 0.0/255.0, green: 255.0/255.0, blue: 128.0/255.0, alpha:0.703852370689655)
+                
+        initText(username,initTitle: "帐号")
         
-        
-        // No border, shadow, floatingPlaceholderEnabled
-        username.layer.borderColor = UIColor.clearColor().CGColor
-        username.floatingPlaceholderEnabled = true
-        username.placeholder = "帐号"
-        username.rippleLayerColor = UIColor.MKColor.LightBlue
-        username.tintColor = UIColor.MKColor.Blue
-        username.backgroundColor = UIColor(hex: 0xE0E0E0)
-        
-        
-        password.layer.borderColor = UIColor.clearColor().CGColor
-        password.floatingPlaceholderEnabled = true
-        password.placeholder = "密码"
-        password.rippleLayerColor = UIColor.MKColor.LightBlue
-        password.tintColor = UIColor.MKColor.Blue
-        password.backgroundColor = UIColor(hex: 0xE0E0E0)
+        initText(password,initTitle: "密码")
         
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Backgroup.png")!)
         
-        loginButton.cornerRadius = 30.0
-        loginButton.backgroundLayerCornerRadius = 30.0
-        loginButton.maskEnabled = false
-        loginButton.ripplePercent = 1.75
-        loginButton.rippleLocation = .Center
-        
-        loginButton.layer.shadowOpacity = 0.75
-        loginButton.layer.shadowRadius = 3.5
-        loginButton.layer.shadowColor = UIColor.blackColor().CGColor
-        loginButton.layer.shadowOffset = CGSize(width: 1.0, height: 2.5)
-        
+        initButton(loginButton)
+
+//        NSTimer.scheduledTimerWithTimeInterval(3.5, target: self, selector: "animateImageRipple", userInfo: nil, repeats: false)
+        initImage(logoMKImage)
+        NSTimer.scheduledTimerWithTimeInterval(1.5, target: self, selector: "animateImageRipple", userInfo: nil, repeats: true)
     }
+
+    func animateImageRipple() {
+        logoMKImage.animateRipple()
+    }
+
     
     @IBOutlet var username: MKTextField!
     
@@ -83,7 +68,7 @@ class LoginViewController: UIViewController,BWWalkthroughViewControllerDelegate{
     
     @IBOutlet var loginButton: MKButton!
     
-    @IBOutlet var centerView: UIView!
+    @IBOutlet var logoMKImage: MKImageView!
     
     @IBAction func closeKey(sender: AnyObject) {
         username.resignFirstResponder();
@@ -143,26 +128,27 @@ class LoginViewController: UIViewController,BWWalkthroughViewControllerDelegate{
 //            let decodedData = NSData(base64EncodedString: base64String!, options: .allZeros)
 //            let decodedString = NSString(data: decodedData, encoding: NSUTF8StringEncoding)
 //            println(decodedString) // foo
-            
-            let userNameText = NSData.AES256EncryptWithPlainText(username.text)
-            let passwordText = NSData.AES256EncryptWithPlainText(password.text)
-            Alamofire.request(.GET, "http://192.168.137.1:8080/login/autoLoad", parameters: ["username": userNameText,"password":passwordText]).responseJSON { response in
-                if let json = response.result.value {
-                    let myJosn = JSON(json)
-                    print("JSON: \(json)")
-                    if let successful = myJosn.dictionary!["successful"]!.bool {
-                        if successful {
-                            self.performSegueWithIdentifier("login", sender: self)
-                        }
-                    }
-                    else
-                    {
-                        let refreshAlert = UIAlertController(title: "错误", message: myJosn.dictionary!["msg"]!.string, preferredStyle: UIAlertControllerStyle.ActionSheet)
-                        refreshAlert.addAction(UIAlertAction(title: "确认", style: .Cancel, handler: { (action: UIAlertAction!) in }))
-                        self.presentViewController(refreshAlert, animated: true, completion: nil)
-                    }
-                }
-            }
+            self.performSegueWithIdentifier("login", sender: self)
+//
+//            let userNameText = NSData.AES256EncryptWithPlainText(username.text)
+//            let passwordText = NSData.AES256EncryptWithPlainText(password.text)
+//            Alamofire.request(.GET, "http://192.168.137.1:8080/login/autoLoad", parameters: ["username": userNameText,"password":passwordText]).responseJSON { response in
+//                if let json = response.result.value {
+//                    let myJosn = JSON(json)
+//                    print("JSON: \(json)")
+//                    if let successful = myJosn.dictionary!["successful"]!.bool {
+//                        if successful {
+//                            self.performSegueWithIdentifier("login", sender: self)
+//                        }
+//                    }
+//                    else
+//                    {
+//                        let refreshAlert = UIAlertController(title: "错误", message: myJosn.dictionary!["msg"]!.string, preferredStyle: UIAlertControllerStyle.ActionSheet)
+//                        refreshAlert.addAction(UIAlertAction(title: "确认", style: .Cancel, handler: { (action: UIAlertAction!) in }))
+//                        self.presentViewController(refreshAlert, animated: true, completion: nil)
+//                    }
+//                }
+//            }
         }
         else
         {

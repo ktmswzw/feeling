@@ -243,8 +243,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="开启超越时空的触动" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m6e-aI-VcE">
-                                <rect key="frame" x="20" y="183" width="560" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="开启超越时空的触动" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m6e-aI-VcE">
+                                <rect key="frame" x="20" y="288" width="560" height="24"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -254,8 +254,10 @@
                         <animations/>
                         <color key="backgroundColor" red="0.16862745100000001" green="0.19215686269999999" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="leadingMargin" secondItem="m6e-aI-VcE" secondAttribute="leading" id="0pl-YW-tar"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="m6e-aI-VcE" secondAttribute="trailing" id="PW6-eU-iyP"/>
+                            <constraint firstItem="m6e-aI-VcE" firstAttribute="centerX" secondItem="kkh-Iu-Fdi" secondAttribute="centerX" id="7Yp-po-2pr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="m6e-aI-VcE" secondAttribute="trailing" id="7ZL-Ho-3hd"/>
+                            <constraint firstItem="m6e-aI-VcE" firstAttribute="centerY" secondItem="kkh-Iu-Fdi" secondAttribute="centerY" id="i7b-ld-V4f"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="m6e-aI-VcE" secondAttribute="leading" id="rha-t6-iZ1"/>
                         </constraints>
                     </view>
                     <userDefinedRuntimeAttributes>
@@ -282,14 +284,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clover.png" translatesAutoresizingMaskIntoConstraints="NO" id="77x-UD-ZVf" customClass="MKImageView" customModule="MaterialKit">
-                                <rect key="frame" x="214" y="429" width="173" height="171"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="173" id="TOa-4k-5fp"/>
-                                    <constraint firstAttribute="height" constant="171" id="g2D-EV-raW"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="如果" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fNB-nk-mDA" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
                                 <rect key="frame" x="20" y="71" width="560" height="45"/>
                                 <animations/>
@@ -326,6 +320,14 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clover.png" translatesAutoresizingMaskIntoConstraints="NO" id="77x-UD-ZVf" customClass="MKImageView" customModule="MaterialKit">
+                                <rect key="frame" x="214" y="429" width="173" height="171"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="173" id="TOa-4k-5fp"/>
+                                    <constraint firstAttribute="height" constant="171" id="g2D-EV-raW"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.16862745100000001" green="0.19215686269999999" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
