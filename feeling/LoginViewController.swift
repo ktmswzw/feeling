@@ -153,6 +153,7 @@ class LoginViewController: UIViewController,BWWalkthroughViewControllerDelegate{
         else
         {
             let refreshAlert = UIAlertController(title: "错误", message: "帐号密码错误", preferredStyle: UIAlertControllerStyle.ActionSheet)
+            
             //refreshAlert.addAction(UIAlertAction(title: "Clear message history", style: .Destructive, handler: { (action: UIAlertAction!) in }))
             refreshAlert.addAction(UIAlertAction(title: "确认", style: .Cancel, handler: { (action: UIAlertAction!) in }))
             presentViewController(refreshAlert, animated: true, completion: nil)

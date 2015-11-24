@@ -96,8 +96,8 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tje-Wd-deX" customClass="MKButton" customModule="MaterialKit">
-                                <rect key="frame" x="270" y="399" width="60" height="60"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tje-Wd-deX" customClass="MKButton" customModule="MaterialKit">
+                                <rect key="frame" x="270" y="398" width="60" height="60"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.1803921568627451" green="0.5490196078431373" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -174,10 +174,73 @@
             </objects>
             <point key="canvasLocation" x="-459" y="182"/>
         </scene>
-        <!--View Controller-->
+        <!--查找-->
+        <scene sceneID="uTW-U8-BBE">
+            <objects>
+                <viewController title="查找" id="iNs-TJ-XDS" customClass="SearchViewController" customModule="feeling" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yb0-uS-0L8"/>
+                        <viewControllerLayoutGuide type="bottom" id="a40-nM-FfV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AbQ-zy-XSg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" red="0.12549019610000001" green="0.14117647059999999" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" tag="3" title="搜" image="calendar" id="MJ7-5v-PTB"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xw0-es-nfw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1098" y="182"/>
+        </scene>
+        <!--好友-->
+        <scene sceneID="jgo-ea-bWo">
+            <objects>
+                <viewController title="好友" id="Sll-2F-Doj" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="L8a-cP-jCa"/>
+                        <viewControllerLayoutGuide type="bottom" id="UYX-Nz-qGJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="otG-ym-8ie">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" red="0.12549019610000001" green="0.14117647059999999" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" tag="1" title="和" image="stats" badgeValue="7" id="PXw-Ke-GGS"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vd2-EJ-jRH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1098" y="941"/>
+        </scene>
+        <!--寄信-->
+        <scene sceneID="3i0-0c-dL5">
+            <objects>
+                <viewController title="寄信" id="4wJ-pg-lRr" customClass="SendViewController" customModule="feeling" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kLq-j6-6m2"/>
+                        <viewControllerLayoutGuide type="bottom" id="kMN-tF-JBk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="t64-5k-88I">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" red="0.12549019610000001" green="0.14117647059999999" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" tag="2" title="寄" image="write" id="M0j-7H-5NJ"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YY0-fc-CV8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="310" y="941"/>
+        </scene>
+        <!--收信-->
         <scene sceneID="yIV-jE-0cc">
             <objects>
-                <viewController id="AC3-5e-kAp" sceneMemberID="viewController">
+                <viewController title="收信" id="AC3-5e-kAp" customClass="ReciveViewController" customModule="feeling" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HtH-A0-eV8"/>
                         <viewControllerLayoutGuide type="bottom" id="8zX-PB-1ko"/>
@@ -186,18 +249,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.12549019610000001" green="0.14117647059999999" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="history" id="NHX-Os-U3A"/>
+                    <tabBarItem key="tabBarItem" title="收" image="read" badgeValue="3" id="NHX-Os-U3A"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iw7-QC-sSz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1122" y="910"/>
+            <point key="canvasLocation" x="1098" y="-500"/>
         </scene>
-        <!--首页-->
+        <!--设置-->
         <scene sceneID="1IH-cD-FDT">
             <objects>
-                <viewController title="首页" id="xAk-si-U21" customClass="HomwViewController" customModule="feeling" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="设置" id="xAk-si-U21" customClass="SettingsViewController" customModule="feeling" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gft-12-cWL"/>
                         <viewControllerLayoutGuide type="bottom" id="d1B-Mc-ahl"/>
@@ -220,115 +284,13 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ya3-hz-l44" customClass="MKButton" customModule="MaterialKit">
-                                <rect key="frame" x="239" y="271" width="123" height="42"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="IOn-aH-rBe"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="TrP-hw-SX3"/>
-                                    <constraint firstAttribute="width" constant="60" id="Vg1-VT-0Uw"/>
-                                    <constraint firstAttribute="height" constant="42" id="csp-YL-dTt"/>
-                                    <constraint firstAttribute="width" constant="123" id="fxf-L6-dKu"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="寄">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="shadowAniEnabled" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="backgroundAniEnabled" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="rippleAniDuration">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="backgroundAniDuration">
-                                        <real key="value" value="2"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowAniDuration">
-                                        <real key="value" value="2"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="2"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="rippleLayerColor">
-                                        <color key="value" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundLayerColor">
-                                        <color key="value" red="0.28498638339999999" green="0.42333190370000001" blue="0.66666666669999997" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="IOn-aH-rBe"/>
-                                        <exclude reference="TrP-hw-SX3"/>
-                                        <exclude reference="Vg1-VT-0Uw"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Oxk-Wm-VVK"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XiH-ov-ZXN" customClass="MKButton" customModule="MaterialKit">
-                                <rect key="frame" x="239" y="361" width="123" height="42"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="1Ok-Qg-YRB"/>
-                                    <constraint firstAttribute="height" constant="42" id="DbF-0Z-x54"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="W0p-jN-fip"/>
-                                    <constraint firstAttribute="width" constant="123" id="agM-Nj-P8V"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="42" id="xRC-4q-t5f"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="收">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="shadowAniEnabled" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="backgroundAniEnabled" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="rippleAniDuration">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="backgroundAniDuration">
-                                        <real key="value" value="2"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowAniDuration">
-                                        <real key="value" value="2"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="2"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="rippleLayerColor">
-                                        <color key="value" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundLayerColor">
-                                        <color key="value" red="0.28498638339999999" green="0.42333190370000001" blue="0.66666666669999997" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="1Ok-Qg-YRB"/>
-                                        <exclude reference="W0p-jN-fip"/>
-                                        <exclude reference="xRC-4q-t5f"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HTb-eG-Lyd"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.12549019607843137" green="0.14117647058823529" blue="0.25098039215686274" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="ya3-hz-l44" firstAttribute="centerX" secondItem="amv-DH-1kg" secondAttribute="centerX" id="Nsj-ww-EAR"/>
-                            <constraint firstItem="XiH-ov-ZXN" firstAttribute="centerX" secondItem="amv-DH-1kg" secondAttribute="centerX" id="SbK-uE-DJa"/>
                             <constraint firstItem="cAU-oG-eWZ" firstAttribute="centerY" secondItem="amv-DH-1kg" secondAttribute="centerY" id="YpI-0v-Gtf"/>
-                            <constraint firstItem="ya3-hz-l44" firstAttribute="top" relation="lessThanOrEqual" secondItem="cAU-oG-eWZ" secondAttribute="bottom" constant="57" id="anT-rS-nCd"/>
                             <constraint firstItem="cAU-oG-eWZ" firstAttribute="centerX" secondItem="amv-DH-1kg" secondAttribute="centerX" id="mnp-o4-ZVk"/>
                             <constraint firstItem="cAU-oG-eWZ" firstAttribute="top" secondItem="gft-12-cWL" secondAttribute="bottom" constant="34" id="pia-bq-ImG"/>
-                            <constraint firstItem="XiH-ov-ZXN" firstAttribute="top" secondItem="ya3-hz-l44" secondAttribute="bottom" constant="48" id="z8R-gB-rVd"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -336,21 +298,23 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" tag="1" badgeValue="55" selectedImage="Backgroup.png" systemItem="favorites" id="Zp4-h0-CSS"/>
+                    <tabBarItem key="tabBarItem" tag="4" title="我" image="settings" badgeValue="2" id="Zp4-h0-CSS">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" id="SSJ-dI-u7j"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
-                        <outlet property="myImage" destination="cAU-oG-eWZ" id="Qa7-Yv-S3W"/>
+                        <outlet property="myImage" destination="cAU-oG-eWZ" id="blt-7d-OhN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TEY-NX-MSR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1122" y="182"/>
+            <point key="canvasLocation" x="310" y="-500"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--控制-->
         <scene sceneID="4m1-I9-1Mr">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="XYa-f4-oXi" sceneMemberID="viewController">
+                <tabBarController title="控制" automaticallyAdjustsScrollViewInsets="NO" id="XYa-f4-oXi" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="ZNp-T2-AFr">
                         <autoresizingMask key="autoresizingMask"/>
@@ -358,8 +322,11 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="xAk-si-U21" kind="relationship" relationship="viewControllers" id="mGW-A3-jOj"/>
                         <segue destination="AC3-5e-kAp" kind="relationship" relationship="viewControllers" id="YgL-mg-zWE"/>
+                        <segue destination="Sll-2F-Doj" kind="relationship" relationship="viewControllers" id="i0b-Un-Ftb"/>
+                        <segue destination="4wJ-pg-lRr" kind="relationship" relationship="viewControllers" id="NYa-pF-VN8"/>
+                        <segue destination="iNs-TJ-XDS" kind="relationship" relationship="viewControllers" id="COO-R9-rSX"/>
+                        <segue destination="xAk-si-U21" kind="relationship" relationship="viewControllers" id="mGW-A3-jOj"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Nt-KM-Bgy" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -368,10 +335,14 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Backgroup.png" width="750" height="1334"/>
+        <image name="calendar" width="26" height="26"/>
         <image name="home-man.jpg" width="200" height="200"/>
         <image name="login_password.png" width="120" height="120"/>
         <image name="login_username.png" width="245" height="254"/>
         <image name="logo feeling.png" width="600" height="600"/>
+        <image name="read" width="22" height="26"/>
+        <image name="settings" width="27" height="27"/>
+        <image name="stats" width="27" height="21"/>
+        <image name="write" width="26" height="24"/>
     </resources>
 </document>

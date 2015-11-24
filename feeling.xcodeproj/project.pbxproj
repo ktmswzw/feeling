@@ -32,9 +32,13 @@
 		BF8A3B1A1BFE1A5200805DF2 /* logo feeling.png in Resources */ = {isa = PBXBuildFile; fileRef = BF8A3B191BFE1A5200805DF2 /* logo feeling.png */; };
 		BF98C6271C019D6A005281E1 /* home-man.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BF98C6251C019D69005281E1 /* home-man.jpg */; };
 		BF98C6281C019D6A005281E1 /* lala.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BF98C6261C019D69005281E1 /* lala.jpg */; };
-		BF98C62A1C019E15005281E1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF98C6291C019E15005281E1 /* HomeViewController.swift */; };
+		BF98C62A1C019E15005281E1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF98C6291C019E15005281E1 /* SettingsViewController.swift */; };
 		BF98C62C1C01A007005281E1 /* UIBeans.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF98C62B1C01A007005281E1 /* UIBeans.swift */; };
 		BF9D748C1BFDF8E1004545CE /* NSData+AES256.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9D748B1BFDF8E1004545CE /* NSData+AES256.m */; };
+		BFBEBE5D1C04B3FB001B472C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBEBE5C1C04B3FB001B472C /* SearchViewController.swift */; };
+		BFBEBE5F1C04B416001B472C /* SendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBEBE5E1C04B416001B472C /* SendViewController.swift */; };
+		BFBEBE611C04B45F001B472C /* ReciveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBEBE601C04B45F001B472C /* ReciveViewController.swift */; };
+		BFBEBE631C04B6C8001B472C /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBEBE621C04B6C8001B472C /* FriendsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,10 +71,14 @@
 		BF8A3B191BFE1A5200805DF2 /* logo feeling.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo feeling.png"; sourceTree = "<group>"; };
 		BF98C6251C019D69005281E1 /* home-man.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "home-man.jpg"; sourceTree = "<group>"; };
 		BF98C6261C019D69005281E1 /* lala.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lala.jpg; sourceTree = "<group>"; };
-		BF98C6291C019E15005281E1 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = c/HomeViewController.swift; sourceTree = "<group>"; };
+		BF98C6291C019E15005281E1 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = c/SettingsViewController.swift; sourceTree = "<group>"; };
 		BF98C62B1C01A007005281E1 /* UIBeans.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIBeans.swift; path = bean/UIBeans.swift; sourceTree = "<group>"; };
 		BF9D74891BFDF8E0004545CE /* feeling-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "feeling-Bridging-Header.h"; sourceTree = "<group>"; };
 		BF9D748B1BFDF8E1004545CE /* NSData+AES256.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+AES256.m"; sourceTree = "<group>"; };
+		BFBEBE5C1C04B3FB001B472C /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = c/SearchViewController.swift; sourceTree = "<group>"; };
+		BFBEBE5E1C04B416001B472C /* SendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SendViewController.swift; path = c/SendViewController.swift; sourceTree = "<group>"; };
+		BFBEBE601C04B45F001B472C /* ReciveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReciveViewController.swift; path = c/ReciveViewController.swift; sourceTree = "<group>"; };
+		BFBEBE621C04B6C8001B472C /* FriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FriendsViewController.swift; path = c/FriendsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,7 +180,11 @@
 			children = (
 				BF2CBDDC1BF705EB007B1BCC /* AppDelegate.swift */,
 				BF4A10571BFB60A500926DD2 /* LoginViewController.swift */,
-				BF98C6291C019E15005281E1 /* HomeViewController.swift */,
+				BF98C6291C019E15005281E1 /* SettingsViewController.swift */,
+				BFBEBE5C1C04B3FB001B472C /* SearchViewController.swift */,
+				BFBEBE5E1C04B416001B472C /* SendViewController.swift */,
+				BFBEBE601C04B45F001B472C /* ReciveViewController.swift */,
+				BFBEBE621C04B6C8001B472C /* FriendsViewController.swift */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -371,17 +383,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFBEBE631C04B6C8001B472C /* FriendsViewController.swift in Sources */,
 				BF4A10581BFB60A500926DD2 /* LoginViewController.swift in Sources */,
 				BF82B6BF1C0215280030D44A /* UIImageColors.swift in Sources */,
+				BFBEBE611C04B45F001B472C /* ReciveViewController.swift in Sources */,
 				BF2CBDF41BF70E22007B1BCC /* BWWalkthroughPageViewController.swift in Sources */,
 				BF98C62C1C01A007005281E1 /* UIBeans.swift in Sources */,
 				BF82B6C11C0217660030D44A /* UICircleImageView.swift in Sources */,
 				BF82B6BD1C02102A0030D44A /* Toucan.swift in Sources */,
 				BF2CBE0F1BF713B9007B1BCC /* CustomPageViewController.swift in Sources */,
 				BF2CBDF51BF70E22007B1BCC /* BWWalkthroughViewController.swift in Sources */,
+				BFBEBE5D1C04B3FB001B472C /* SearchViewController.swift in Sources */,
 				BF2CBDDD1BF705EB007B1BCC /* AppDelegate.swift in Sources */,
-				BF98C62A1C019E15005281E1 /* HomeViewController.swift in Sources */,
+				BF98C62A1C019E15005281E1 /* SettingsViewController.swift in Sources */,
 				BF9D748C1BFDF8E1004545CE /* NSData+AES256.m in Sources */,
+				BFBEBE5F1C04B416001B472C /* SendViewController.swift in Sources */,
 				BF2CBDE51BF705EB007B1BCC /* feeling.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

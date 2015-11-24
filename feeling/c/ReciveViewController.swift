@@ -1,36 +1,17 @@
 //
-//  HomwViewController.swift
+//  ReciveViewController.swift
 //  feeling
 //
-//  Created by vincent on 15/11/22.
+//  Created by vincent on 15/11/24.
 //  Copyright © 2015年 xecoder. All rights reserved.
 //
 
 import UIKit
 
+class ReciveViewController: UIViewController {
 
-class HomwViewController: UIViewController {
-
-    
-    @IBOutlet var myImage: UIImageView!
-    
-    @IBOutlet var mainLabel: UILabel!
-    @IBOutlet var secondaryLabel: UILabel!
-    @IBOutlet var detailLabel: UILabel!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-//        let myImages:UIImage = UIImage(named: "home-man.jpg")!
-        
-//        let colors = myImages.getColors()
-//
-//        self.view.backgroundColor = colors.backgroundColor
-//        mainLabel.textColor = colors.primaryColor
-//        secondaryLabel.textColor = colors.secondaryColor
-//        detailLabel.textColor = colors.detailColor
-//        
-//        Toucan.Mask.maskImageWithEllipse(myImages)
 
         // Do any additional setup after loading the view.
     }
@@ -50,5 +31,9 @@ class HomwViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return UIStatusBarStyle.LightContent
+    }
+    
 }
