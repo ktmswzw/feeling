@@ -34,6 +34,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>RAMAnimatedTabBarController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SQLite.swift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -52,12 +57,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>19BE751B5D06695D62E7EA0CE71113BA</key>
+		<key>2112B04814E78D70792C1DC06026AF48</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>38D9614B146D4C1B0E115CBA919C200A</key>
+		<key>28C11D725B43487D69BA7BED1C3A1865</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>28E2DEEDE39D0A6BED56DB5A85A2CA08</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -72,12 +82,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>916EBE28D617D92642FEDBA1890FCC08</key>
+		<key>A7AF6E763314D4D05792E29A5B9ABDE6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A7AF6E763314D4D05792E29A5B9ABDE6</key>
+		<key>B1349D8822B0C9DEF2C717A17F93770D</key>
 		<dict>
 			<key>primary</key>
 			<true/>

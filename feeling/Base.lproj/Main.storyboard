@@ -188,10 +188,15 @@
                         <animations/>
                         <color key="backgroundColor" red="0.12549019610000001" green="0.14117647059999999" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" tag="3" title="搜" image="calendar" id="MJ7-5v-PTB"/>
+                    <tabBarItem key="tabBarItem" tag="3" title="搜" image="calendar" id="MJ7-5v-PTB" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                        <connections>
+                            <outlet property="animation" destination="X9K-z6-qMC" id="ija-Pf-JuJ"/>
+                        </connections>
+                    </tabBarItem>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xw0-es-nfw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="X9K-z6-qMC" customClass="RAMRightRotationAnimation" customModule="RAMAnimatedTabBarController"/>
             </objects>
             <point key="canvasLocation" x="1098" y="182"/>
         </scene>
@@ -209,10 +214,15 @@
                         <animations/>
                         <color key="backgroundColor" red="0.12549019610000001" green="0.14117647059999999" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" tag="1" title="和" image="stats" badgeValue="7" id="PXw-Ke-GGS"/>
+                    <tabBarItem key="tabBarItem" tag="1" title="和" image="stats" id="PXw-Ke-GGS" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                        <connections>
+                            <outlet property="animation" destination="BvJ-8o-43v" id="I0c-uM-9wq"/>
+                        </connections>
+                    </tabBarItem>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vd2-EJ-jRH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="BvJ-8o-43v" customClass="RAMFlipBottomTransitionItemAniamtions" customModule="RAMAnimatedTabBarController"/>
             </objects>
             <point key="canvasLocation" x="1098" y="941"/>
         </scene>
@@ -230,10 +240,15 @@
                         <animations/>
                         <color key="backgroundColor" red="0.12549019610000001" green="0.14117647059999999" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" tag="2" title="寄" image="write" id="M0j-7H-5NJ"/>
+                    <tabBarItem key="tabBarItem" tag="2" title="寄" image="write" id="M0j-7H-5NJ" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                        <connections>
+                            <outlet property="animation" destination="8og-BM-DkM" id="GO6-hR-38s"/>
+                        </connections>
+                    </tabBarItem>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YY0-fc-CV8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="8og-BM-DkM" customClass="RAMFumeAnimation" customModule="RAMAnimatedTabBarController"/>
             </objects>
             <point key="canvasLocation" x="310" y="941"/>
         </scene>
@@ -251,10 +266,15 @@
                         <animations/>
                         <color key="backgroundColor" red="0.12549019610000001" green="0.14117647059999999" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="收" image="read" badgeValue="3" id="NHX-Os-U3A"/>
+                    <tabBarItem key="tabBarItem" title="收" image="read" id="NHX-Os-U3A" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                        <connections>
+                            <outlet property="animation" destination="t1B-E4-EqG" id="zaF-0d-hkJ"/>
+                        </connections>
+                    </tabBarItem>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iw7-QC-sSz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="t1B-E4-EqG" customClass="RAMLeftRotationAnimation" customModule="RAMAnimatedTabBarController"/>
             </objects>
             <point key="canvasLocation" x="1098" y="-500"/>
         </scene>
@@ -298,8 +318,11 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" tag="4" title="我" image="settings" badgeValue="2" id="Zp4-h0-CSS">
+                    <tabBarItem key="tabBarItem" tag="4" title="我" image="settings" id="Zp4-h0-CSS" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                        <connections>
+                            <outlet property="animation" destination="EDe-zG-Zv9" id="p8S-L9-CtC"/>
+                        </connections>
                     </tabBarItem>
                     <navigationItem key="navigationItem" id="SSJ-dI-u7j"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
@@ -308,13 +331,14 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TEY-NX-MSR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="EDe-zG-Zv9" customClass="RAMBounceAnimation" customModule="RAMAnimatedTabBarController"/>
             </objects>
             <point key="canvasLocation" x="310" y="-500"/>
         </scene>
         <!--控制-->
         <scene sceneID="4m1-I9-1Mr">
             <objects>
-                <tabBarController title="控制" automaticallyAdjustsScrollViewInsets="NO" id="XYa-f4-oXi" sceneMemberID="viewController">
+                <tabBarController title="控制" automaticallyAdjustsScrollViewInsets="NO" id="XYa-f4-oXi" customClass="RAMAnimatedTabBarController" customModule="RAMAnimatedTabBarController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="ZNp-T2-AFr">
                         <autoresizingMask key="autoresizingMask"/>
