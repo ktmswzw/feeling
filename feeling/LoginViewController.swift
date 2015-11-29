@@ -21,6 +21,7 @@ class LoginViewController: UIViewController,BWWalkthroughViewControllerDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        NSThread.sleepForTimeInterval(1.0)
         // Do any additional setup after loading the view, typically from a nib.
         
         
@@ -197,7 +198,5 @@ class LoginViewController: UIViewController,BWWalkthroughViewControllerDelegate{
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return UIStatusBarStyle.LightContent
     }
-    
-    
 }
 

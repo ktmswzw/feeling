@@ -24,6 +24,7 @@
 		BF4893D11BF77A6900DF6EE5 /* clover.png in Resources */ = {isa = PBXBuildFile; fileRef = BF4893CF1BF77A6900DF6EE5 /* clover.png */; };
 		BF4893D51BF77C7500DF6EE5 /* clover2.png in Resources */ = {isa = PBXBuildFile; fileRef = BF4893D41BF77C7500DF6EE5 /* clover2.png */; };
 		BF4A10581BFB60A500926DD2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4A10571BFB60A500926DD2 /* LoginViewController.swift */; };
+		BF7F08921C0AEF0600236AD8 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF7F08901C0AEF0600236AD8 /* Launch Screen.storyboard */; };
 		BF82B6BD1C02102A0030D44A /* Toucan.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF82B6BC1C02102A0030D44A /* Toucan.swift */; };
 		BF82B6BF1C0215280030D44A /* UIImageColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF82B6BE1C0215280030D44A /* UIImageColors.swift */; };
 		BF82B6C11C0217660030D44A /* UICircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF82B6C01C0217660030D44A /* UICircleImageView.swift */; };
@@ -63,6 +64,7 @@
 		BF4893CF1BF77A6900DF6EE5 /* clover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clover.png; sourceTree = "<group>"; };
 		BF4893D41BF77C7500DF6EE5 /* clover2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clover2.png; sourceTree = "<group>"; };
 		BF4A10571BFB60A500926DD2 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		BF7F08911C0AEF0600236AD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Launch Screen.storyboard"; sourceTree = "<group>"; };
 		BF82B6BC1C02102A0030D44A /* Toucan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Toucan.swift; path = feeling/Toucan.swift; sourceTree = "<group>"; };
 		BF82B6BE1C0215280030D44A /* UIImageColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageColors.swift; sourceTree = "<group>"; };
 		BF82B6C01C0217660030D44A /* UICircleImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICircleImageView.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 			children = (
 				BF2CBDE01BF705EB007B1BCC /* Main.storyboard */,
 				BF2CBE101BF71456007B1BCC /* Walkthrough.storyboard */,
+				BF7F08901C0AEF0600236AD8 /* Launch Screen.storyboard */,
 			);
 			name = storyboard;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 				BF8A3B171BFE1A4A00805DF2 /* login_password.png in Resources */,
 				BF4893D51BF77C7500DF6EE5 /* clover2.png in Resources */,
 				BF2CBE111BF71456007B1BCC /* Walkthrough.storyboard in Resources */,
+				BF7F08921C0AEF0600236AD8 /* Launch Screen.storyboard in Resources */,
 				BF2CBE091BF70F48007B1BCC /* cloud1@2x.png in Resources */,
 				BF8A3B1A1BFE1A5200805DF2 /* logo feeling.png in Resources */,
 				BF4893C81BF7738A00DF6EE5 /* father.png in Resources */,
@@ -411,6 +415,14 @@
 				BF2CBDE11BF705EB007B1BCC /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BF7F08901C0AEF0600236AD8 /* Launch Screen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF7F08911C0AEF0600236AD8 /* Base */,
+			);
+			name = "Launch Screen.storyboard";
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
