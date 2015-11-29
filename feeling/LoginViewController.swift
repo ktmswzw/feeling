@@ -21,10 +21,32 @@ class LoginViewController: UIViewController,BWWalkthroughViewControllerDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        NSThread.sleepForTimeInterval(1.0)
+        NSThread.sleepForTimeInterval(0.5)
         // Do any additional setup after loading the view, typically from a nib.
         
+        let imageViewU = UIImageView();
+        let imageU = UIImage(named: "login_username.png");
+        imageViewU.image = imageU;
+        imageViewU.frame = CGRect(x: 5, y: 5, width: 25, height: 25)
+        self.view.addSubview(imageViewU)
+        username.leftView = imageViewU;
+        username.leftViewMode = UITextFieldViewMode.Always
         
+        
+        let imageViewP = UIImageView();
+        let imageP = UIImage(named: "login_password.png");
+        imageViewP.image = imageP;
+        imageViewP.frame = CGRect(x: 5, y: 5, width: 25, height: 25)
+        self.view.addSubview(imageViewP)
+        password.leftView = imageViewP;
+        password.leftViewMode = UITextFieldViewMode.Always
+        
+        
+        let register = ActionButtonItem(title: "注册帐号", image: UIImage(named: "new")!)
+        register.action = { item in self.showWalkthrough() }
+        
+        let forget = ActionButtonItem(title: "忘记密码", image: UIImage(named: "new")!)
+        forget.action = { item in self.showWalkthrough() }
         
         let wechatLogin = ActionButtonItem(title: "微信登录", image: UIImage(named: "wechat")!)
         wechatLogin.action = { item in self.showWalkthrough()  }
@@ -40,9 +62,9 @@ class LoginViewController: UIViewController,BWWalkthroughViewControllerDelegate{
         let taobaoLogin = ActionButtonItem(title: "淘宝登录", image: UIImage(named: "taobao")!)
         taobaoLogin.action = { item in self.showWalkthrough() }
         
-        actionButton = ActionButton(attachedToView: self.view, items: [wechatLogin, qqLogin, weiboLogin, taobaoLogin])
+        actionButton = ActionButton(attachedToView: self.view, items: [register, forget, wechatLogin, qqLogin, weiboLogin, taobaoLogin])
         actionButton.action = { button in button.toggleMenu() }
-        actionButton.setTitle("?", forState: .Normal)
+        actionButton.setTitle("+", forState: .Normal)
         actionButton.backgroundColor = UIColor(red: 0.0/255.0, green: 255.0/255.0, blue: 128.0/255.0, alpha:0.703852370689655)
                 
         initText(username,initTitle: "帐号")

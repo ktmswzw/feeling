@@ -18,11 +18,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ins-2P-k7k" customClass="MKTextField" customModule="MaterialKit">
-                                <rect key="frame" x="221" y="318" width="158" height="40"/>
+                                <rect key="frame" x="200" y="318" width="200" height="40"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="7qi-K6-BfF"/>
-                                    <constraint firstAttribute="width" constant="158" id="Rrf-3o-uXs"/>
+                                    <constraint firstAttribute="width" constant="200" id="Rrf-3o-uXs"/>
                                     <constraint firstAttribute="height" constant="40" id="sIf-sn-oir"/>
                                     <constraint firstAttribute="width" constant="166" id="zRo-BK-tUx"/>
                                 </constraints>
@@ -36,41 +36,6 @@
                                 </variation>
                                 <connections>
                                     <action selector="closeKeyP:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="hJK-DW-ZL1"/>
-                                </connections>
-                            </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_password.png" translatesAutoresizingMaskIntoConstraints="NO" id="Cwy-hH-s2N">
-                                <rect key="frame" x="173" y="318" width="40" height="40"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="Vc0-V0-hKF"/>
-                                    <constraint firstAttribute="width" constant="40" id="egj-WI-NLP"/>
-                                </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_username.png" translatesAutoresizingMaskIntoConstraints="NO" id="aPR-hR-RQy">
-                                <rect key="frame" x="173" y="242" width="40" height="40"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="40" id="Hqo-bY-0SO"/>
-                                    <constraint firstAttribute="height" constant="40" id="ild-Rl-yvT"/>
-                                </constraints>
-                            </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="账号" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bSq-gg-MTB" customClass="MKTextField" customModule="MaterialKit">
-                                <rect key="frame" x="221" y="242" width="158" height="40"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="166" id="8PB-uP-h6F"/>
-                                    <constraint firstAttribute="width" constant="158" id="gIm-4P-LT5"/>
-                                    <constraint firstAttribute="height" constant="40" id="rXX-pG-h3m"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="8PB-uP-h6F"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <action selector="closeKey:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="1kO-yK-I2d"/>
                                 </connections>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6DX-Lz-okY">
@@ -119,6 +84,25 @@
                                     <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gst-KI-yrs"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="账号" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bSq-gg-MTB" customClass="MKTextField" customModule="MaterialKit">
+                                <rect key="frame" x="200" y="242" width="200" height="40"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="166" id="8PB-uP-h6F"/>
+                                    <constraint firstAttribute="width" constant="200" id="gIm-4P-LT5"/>
+                                    <constraint firstAttribute="height" constant="40" id="rXX-pG-h3m"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="8PB-uP-h6F"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="closeKey:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="1kO-yK-I2d"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.16862745100000001" green="0.19215686269999999" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -126,7 +110,6 @@
                             <constraint firstItem="bSq-gg-MTB" firstAttribute="top" secondItem="In3-R8-WU6" secondAttribute="bottom" constant="61" id="1RI-pC-jzC"/>
                             <constraint firstAttribute="trailingMargin" secondItem="6DX-Lz-okY" secondAttribute="trailing" id="32W-Nr-Qo2"/>
                             <constraint firstItem="In3-R8-WU6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6Jn-El-79K"/>
-                            <constraint firstItem="6DX-Lz-okY" firstAttribute="top" secondItem="aPR-hR-RQy" secondAttribute="bottom" constant="8" symbolic="YES" id="6hp-Fe-Hrq"/>
                             <constraint firstItem="tje-Wd-deX" firstAttribute="top" secondItem="kw4-jy-ZNy" secondAttribute="bottom" constant="8" symbolic="YES" id="D1D-nz-3gT"/>
                             <constraint firstItem="In3-R8-WU6" firstAttribute="top" secondItem="kw4-jy-ZNy" secondAttribute="bottom" constant="40" id="Db6-t7-Xco"/>
                             <constraint firstItem="dzU-6Z-nEP" firstAttribute="top" secondItem="tje-Wd-deX" secondAttribute="bottom" constant="8" symbolic="YES" id="FgC-w6-AIk"/>
@@ -139,10 +122,7 @@
                             <constraint firstItem="ins-2P-k7k" firstAttribute="top" secondItem="6DX-Lz-okY" secondAttribute="bottom" constant="8" symbolic="YES" id="SsI-ex-Smq"/>
                             <constraint firstItem="bSq-gg-MTB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="T9R-ge-bMe"/>
                             <constraint firstItem="6DX-Lz-okY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="a0u-j4-GG3"/>
-                            <constraint firstItem="bSq-gg-MTB" firstAttribute="leading" secondItem="aPR-hR-RQy" secondAttribute="trailing" constant="8" symbolic="YES" id="enT-gi-7fH"/>
                             <constraint firstItem="tje-Wd-deX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="f8J-Vh-duN"/>
-                            <constraint firstItem="Cwy-hH-s2N" firstAttribute="top" secondItem="6DX-Lz-okY" secondAttribute="bottom" constant="8" symbolic="YES" id="lb8-4h-DSp"/>
-                            <constraint firstItem="ins-2P-k7k" firstAttribute="leading" secondItem="Cwy-hH-s2N" secondAttribute="trailing" constant="8" symbolic="YES" id="nfz-Mq-KBh"/>
                             <constraint firstItem="In3-R8-WU6" firstAttribute="top" relation="lessThanOrEqual" secondItem="kw4-jy-ZNy" secondAttribute="bottom" constant="41" id="rkD-EH-6yI"/>
                             <constraint firstItem="6DX-Lz-okY" firstAttribute="top" secondItem="bSq-gg-MTB" secondAttribute="bottom" constant="8" symbolic="YES" id="sal-9D-VTm"/>
                             <constraint firstItem="6DX-Lz-okY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="t6L-DE-NFN"/>
@@ -191,7 +171,7 @@
                     <tabBarItem key="tabBarItem" tag="3" title="寻觅" image="search" id="MJ7-5v-PTB" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="textColor">
-                                <color key="value" name="alternateSelectedControlColor" catalog="System" colorSpace="catalog"/>
+                                <color key="value" name="controlDarkShadowColor" catalog="System" colorSpace="catalog"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                         <connections>
@@ -422,8 +402,6 @@
     </scenes>
     <resources>
         <image name="home-man.jpg" width="200" height="200"/>
-        <image name="login_password.png" width="120" height="120"/>
-        <image name="login_username.png" width="245" height="254"/>
         <image name="logo feeling.png" width="600" height="600"/>
         <image name="read" width="22" height="26"/>
         <image name="search" width="33" height="33"/>

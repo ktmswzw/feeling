@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "feeling/LoginViewController.swift"
-            timestampString = "470478934.026668"
+            timestampString = "470501263.224952"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "109"
-            endingLineNumber = "109"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
             landmarkName = "asciiCArrayToSwiftString(_:)"
             landmarkType = "5">
          </BreakpointContent>
