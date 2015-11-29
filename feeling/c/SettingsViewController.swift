@@ -17,7 +17,8 @@ class SettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Backgroup.png")!)
 //        let myImages:UIImage = UIImage(named: "home-man.jpg")!
         
 //        let colors = myImages.getColors()

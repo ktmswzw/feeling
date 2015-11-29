@@ -80,22 +80,6 @@
                                     <constraint firstAttribute="height" constant="20" id="5ZZ-kA-bcv"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo feeling.png" translatesAutoresizingMaskIntoConstraints="NO" id="In3-R8-WU6" customClass="MKImageView" customModule="MaterialKit">
-                                <rect key="frame" x="240" y="82" width="120" height="120"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="120" id="6wa-Rf-udk"/>
-                                    <constraint firstAttribute="height" constant="120" id="7Bv-Bd-1lS"/>
-                                    <constraint firstAttribute="width" constant="120" id="LVy-8M-XV0"/>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="120" id="bxU-RU-4dp"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="LVy-8M-XV0"/>
-                                        <exclude reference="bxU-RU-4dp"/>
-                                    </mask>
-                                </variation>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tje-Wd-deX" customClass="MKButton" customModule="MaterialKit">
                                 <rect key="frame" x="270" y="398" width="60" height="60"/>
                                 <animations/>
@@ -119,6 +103,22 @@
                                     <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gst-KI-yrs"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo feeling.png" translatesAutoresizingMaskIntoConstraints="NO" id="In3-R8-WU6" customClass="MKImageView" customModule="MaterialKit">
+                                <rect key="frame" x="240" y="82" width="120" height="120"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="6wa-Rf-udk"/>
+                                    <constraint firstAttribute="height" constant="120" id="7Bv-Bd-1lS"/>
+                                    <constraint firstAttribute="width" constant="120" id="LVy-8M-XV0"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="120" id="bxU-RU-4dp"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="LVy-8M-XV0"/>
+                                        <exclude reference="bxU-RU-4dp"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.16862745100000001" green="0.19215686269999999" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -188,7 +188,12 @@
                         <animations/>
                         <color key="backgroundColor" red="0.12549019610000001" green="0.14117647059999999" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" tag="3" title="搜" image="calendar" id="MJ7-5v-PTB" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                    <tabBarItem key="tabBarItem" tag="3" title="寻觅" image="search" id="MJ7-5v-PTB" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                <color key="value" name="alternateSelectedControlColor" catalog="System" colorSpace="catalog"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                         <connections>
                             <outlet property="animation" destination="X9K-z6-qMC" id="ija-Pf-JuJ"/>
                         </connections>
@@ -196,14 +201,23 @@
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xw0-es-nfw" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="X9K-z6-qMC" customClass="RAMRightRotationAnimation" customModule="RAMAnimatedTabBarController"/>
+                <customObject id="X9K-z6-qMC" customClass="RAMFlipRightTransitionItemAniamtions" customModule="RAMAnimatedTabBarController">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="textSelectedColor">
+                            <color key="value" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="1098" y="182"/>
         </scene>
         <!--好友-->
         <scene sceneID="jgo-ea-bWo">
             <objects>
-                <viewController title="好友" id="Sll-2F-Doj" sceneMemberID="viewController">
+                <viewController title="好友" id="Sll-2F-Doj" customClass="FriendsViewController" customModule="feeling" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L8a-cP-jCa"/>
                         <viewControllerLayoutGuide type="bottom" id="UYX-Nz-qGJ"/>
@@ -214,7 +228,12 @@
                         <animations/>
                         <color key="backgroundColor" red="0.12549019610000001" green="0.14117647059999999" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" tag="1" title="和" image="stats" id="PXw-Ke-GGS" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                    <tabBarItem key="tabBarItem" tag="1" title="伙伴" image="stats" id="PXw-Ke-GGS" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                <color key="value" name="alternateSelectedControlColor" catalog="System" colorSpace="catalog"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                         <connections>
                             <outlet property="animation" destination="BvJ-8o-43v" id="I0c-uM-9wq"/>
                         </connections>
@@ -222,7 +241,16 @@
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vd2-EJ-jRH" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="BvJ-8o-43v" customClass="RAMFlipBottomTransitionItemAniamtions" customModule="RAMAnimatedTabBarController"/>
+                <customObject id="BvJ-8o-43v" customClass="RAMFlipLeftTransitionItemAniamtions" customModule="RAMAnimatedTabBarController">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="textSelectedColor">
+                            <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="1098" y="941"/>
         </scene>
@@ -240,7 +268,12 @@
                         <animations/>
                         <color key="backgroundColor" red="0.12549019610000001" green="0.14117647059999999" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" tag="2" title="寄" image="write" id="M0j-7H-5NJ" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                    <tabBarItem key="tabBarItem" tag="2" title="藏匿" image="write" id="M0j-7H-5NJ" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                <color key="value" name="alternateSelectedControlColor" catalog="System" colorSpace="catalog"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                         <connections>
                             <outlet property="animation" destination="8og-BM-DkM" id="GO6-hR-38s"/>
                         </connections>
@@ -248,9 +281,18 @@
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YY0-fc-CV8" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="8og-BM-DkM" customClass="RAMFumeAnimation" customModule="RAMAnimatedTabBarController"/>
+                <customObject id="8og-BM-DkM" customClass="RAMFumeAnimation" customModule="RAMAnimatedTabBarController">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="textSelectedColor">
+                            <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </customObject>
             </objects>
-            <point key="canvasLocation" x="310" y="941"/>
+            <point key="canvasLocation" x="249" y="941"/>
         </scene>
         <!--收信-->
         <scene sceneID="yIV-jE-0cc">
@@ -266,7 +308,12 @@
                         <animations/>
                         <color key="backgroundColor" red="0.12549019610000001" green="0.14117647059999999" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="收" image="read" id="NHX-Os-U3A" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                    <tabBarItem key="tabBarItem" title="胶囊" image="read" id="NHX-Os-U3A" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="keyPath">
+                                <color key="value" name="alternateSelectedControlColor" catalog="System" colorSpace="catalog"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                         <connections>
                             <outlet property="animation" destination="t1B-E4-EqG" id="zaF-0d-hkJ"/>
                         </connections>
@@ -274,7 +321,16 @@
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iw7-QC-sSz" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="t1B-E4-EqG" customClass="RAMLeftRotationAnimation" customModule="RAMAnimatedTabBarController"/>
+                <customObject id="t1B-E4-EqG" customClass="RAMLeftRotationAnimation" customModule="RAMAnimatedTabBarController">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="textSelectedColor">
+                            <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="1098" y="-500"/>
         </scene>
@@ -318,7 +374,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" tag="4" title="我" image="settings" id="Zp4-h0-CSS" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                    <tabBarItem key="tabBarItem" tag="4" title="设定" image="setting" id="Zp4-h0-CSS" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                         <connections>
                             <outlet property="animation" destination="EDe-zG-Zv9" id="p8S-L9-CtC"/>
@@ -331,7 +387,13 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TEY-NX-MSR" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="EDe-zG-Zv9" customClass="RAMBounceAnimation" customModule="RAMAnimatedTabBarController"/>
+                <customObject id="EDe-zG-Zv9" customClass="RAMRightRotationAnimation" customModule="RAMAnimatedTabBarController">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="310" y="-500"/>
         </scene>
@@ -359,13 +421,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="calendar" width="26" height="26"/>
         <image name="home-man.jpg" width="200" height="200"/>
         <image name="login_password.png" width="120" height="120"/>
         <image name="login_username.png" width="245" height="254"/>
         <image name="logo feeling.png" width="600" height="600"/>
         <image name="read" width="22" height="26"/>
-        <image name="settings" width="27" height="27"/>
+        <image name="search" width="33" height="33"/>
+        <image name="setting" width="27" height="27"/>
         <image name="stats" width="27" height="21"/>
         <image name="write" width="26" height="24"/>
     </resources>
