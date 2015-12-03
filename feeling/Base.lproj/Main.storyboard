@@ -62,16 +62,16 @@
                                 </variation>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tje-Wd-deX" customClass="MKButton" customModule="MaterialKit">
-                                <rect key="frame" x="270" y="398" width="60" height="60"/>
+                                <rect key="frame" x="200" y="398" width="200" height="40"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.1803921568627451" green="0.5490196078431373" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="Gbp-dD-7Rn"/>
-                                    <constraint firstAttribute="height" constant="60" id="KV8-ew-ibt"/>
-                                    <constraint firstAttribute="width" constant="60" id="LlW-nX-vSi"/>
+                                    <constraint firstAttribute="height" constant="40" id="KV8-ew-ibt"/>
+                                    <constraint firstAttribute="width" constant="200" id="LlW-nX-vSi"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="登陆">
+                                <state key="normal" title="开启">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -245,8 +245,40 @@
                     <view key="view" contentMode="scaleToFill" id="t64-5k-88I">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="至尊宝" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hrk-t4-5t1">
+                                <rect key="frame" x="20" y="28" width="522" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="lLz-03-5da"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QNh-PN-X3m" customClass="MKButton" customModule="MaterialKit">
+                                <rect key="frame" x="550" y="28" width="30" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.18039215689999999" green="0.54901960780000003" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="AYI-7Q-shB"/>
+                                    <constraint firstAttribute="width" constant="30" id="aXa-iP-xG5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="🔍">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.12549019610000001" green="0.14117647059999999" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="hrk-t4-5t1" firstAttribute="top" secondItem="QNh-PN-X3m" secondAttribute="top" id="E1w-ra-agh"/>
+                            <constraint firstItem="hrk-t4-5t1" firstAttribute="top" secondItem="kLq-j6-6m2" secondAttribute="bottom" constant="8" symbolic="YES" id="HZq-AH-k3F"/>
+                            <constraint firstItem="hrk-t4-5t1" firstAttribute="leading" secondItem="t64-5k-88I" secondAttribute="leadingMargin" id="YbN-Fx-uHB"/>
+                            <constraint firstItem="QNh-PN-X3m" firstAttribute="trailing" secondItem="t64-5k-88I" secondAttribute="trailingMargin" id="fna-M7-7rW"/>
+                            <constraint firstItem="QNh-PN-X3m" firstAttribute="leading" secondItem="hrk-t4-5t1" secondAttribute="trailing" constant="8" symbolic="YES" id="lQe-27-duk"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" tag="2" title="藏匿" image="write" id="M0j-7H-5NJ" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
                         <userDefinedRuntimeAttributes>
@@ -259,6 +291,9 @@
                         </connections>
                     </tabBarItem>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <connections>
+                        <outlet property="photo" destination="QNh-PN-X3m" id="NVq-TZ-BAG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YY0-fc-CV8" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="8og-BM-DkM" customClass="RAMFumeAnimation" customModule="RAMAnimatedTabBarController">
@@ -272,7 +307,7 @@
                     </userDefinedRuntimeAttributes>
                 </customObject>
             </objects>
-            <point key="canvasLocation" x="249" y="941"/>
+            <point key="canvasLocation" x="248" y="941"/>
         </scene>
         <!--收信-->
         <scene sceneID="yIV-jE-0cc">
@@ -290,7 +325,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="胶囊" image="read" id="NHX-Os-U3A" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
                         <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="color" keyPath="keyPath">
+                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
                                 <color key="value" name="alternateSelectedControlColor" catalog="System" colorSpace="catalog"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>

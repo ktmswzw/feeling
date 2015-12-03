@@ -13,6 +13,8 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //button1.setBackgroundImage(UIImage(named:"logo.jpg"),forState: UIControlState.Normal)
+        // 添加点击事件
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Backgroup.png")!)
         // Do any additional setup after loading the view.
     }

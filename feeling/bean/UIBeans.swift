@@ -23,6 +23,20 @@ func initButton(initButton: MKButton){
     initButton.layer.shadowOffset = CGSize(width: 1.0, height: 2.5)
 }
 
+func initButton(initButton: MKButton, initRadius: CGFloat){
+    initButton.cornerRadius = initRadius
+    initButton.backgroundLayerCornerRadius = 30.0
+    initButton.maskEnabled = false
+    initButton.ripplePercent = 1.75
+    initButton.rippleLocation = .Center
+
+    initButton.layer.shadowOpacity = 0.75
+    initButton.layer.shadowRadius = 3.5
+    initButton.layer.shadowColor = UIColor.blackColor().CGColor
+    initButton.layer.shadowOffset = CGSize(width: 1.0, height: 2.5)
+}
+
+
 func initText(initText: MKTextField,initTitle: String)
 {
     // No border, shadow, floatingPlaceholderEnabled

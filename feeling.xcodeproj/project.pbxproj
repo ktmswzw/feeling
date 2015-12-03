@@ -24,6 +24,9 @@
 		BF4893D11BF77A6900DF6EE5 /* clover.png in Resources */ = {isa = PBXBuildFile; fileRef = BF4893CF1BF77A6900DF6EE5 /* clover.png */; };
 		BF4893D51BF77C7500DF6EE5 /* clover2.png in Resources */ = {isa = PBXBuildFile; fileRef = BF4893D41BF77C7500DF6EE5 /* clover2.png */; };
 		BF4A10581BFB60A500926DD2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4A10571BFB60A500926DD2 /* LoginViewController.swift */; };
+		BF5971041C0DEAE600333A15 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = BF5971011C0DEAE600333A15 /* camera.png */; };
+		BF5971051C0DEAE600333A15 /* photo.png in Resources */ = {isa = PBXBuildFile; fileRef = BF5971021C0DEAE600333A15 /* photo.png */; };
+		BF5971061C0DEAE600333A15 /* recond.png in Resources */ = {isa = PBXBuildFile; fileRef = BF5971031C0DEAE600333A15 /* recond.png */; };
 		BF7F08921C0AEF0600236AD8 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF7F08901C0AEF0600236AD8 /* Launch Screen.storyboard */; };
 		BF82B6BD1C02102A0030D44A /* Toucan.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF82B6BC1C02102A0030D44A /* Toucan.swift */; };
 		BF82B6BF1C0215280030D44A /* UIImageColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF82B6BE1C0215280030D44A /* UIImageColors.swift */; };
@@ -64,6 +67,9 @@
 		BF4893CF1BF77A6900DF6EE5 /* clover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clover.png; sourceTree = "<group>"; };
 		BF4893D41BF77C7500DF6EE5 /* clover2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clover2.png; sourceTree = "<group>"; };
 		BF4A10571BFB60A500926DD2 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		BF5971011C0DEAE600333A15 /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
+		BF5971021C0DEAE600333A15 /* photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo.png; sourceTree = "<group>"; };
+		BF5971031C0DEAE600333A15 /* recond.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = recond.png; sourceTree = "<group>"; };
 		BF7F08911C0AEF0600236AD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Launch Screen.storyboard"; sourceTree = "<group>"; };
 		BF82B6BC1C02102A0030D44A /* Toucan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Toucan.swift; path = feeling/Toucan.swift; sourceTree = "<group>"; };
 		BF82B6BE1C0215280030D44A /* UIImageColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageColors.swift; sourceTree = "<group>"; };
@@ -204,6 +210,9 @@
 		BF2CBDFA1BF70F24007B1BCC /* logo */ = {
 			isa = PBXGroup;
 			children = (
+				BF5971011C0DEAE600333A15 /* camera.png */,
+				BF5971021C0DEAE600333A15 /* photo.png */,
+				BF5971031C0DEAE600333A15 /* recond.png */,
 				BF9D4B8B1C0B418400B2B1A7 /* login_username.png */,
 				BF9D4B8C1C0B418400B2B1A7 /* login_password.png */,
 				BF8A3B191BFE1A5200805DF2 /* logo feeling.png */,
@@ -314,9 +323,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF9D4B8E1C0B418400B2B1A7 /* login_password.png in Resources */,
+				BF5971041C0DEAE600333A15 /* camera.png in Resources */,
 				BF2CBDE71BF705EB007B1BCC /* Assets.xcassets in Resources */,
 				BF98C6281C019D6A005281E1 /* lala.jpg in Resources */,
 				BF2CBDE21BF705EB007B1BCC /* Main.storyboard in Resources */,
+				BF5971061C0DEAE600333A15 /* recond.png in Resources */,
 				BF2CBE051BF70F48007B1BCC /* img3@2x.png in Resources */,
 				BF9D4B8D1C0B418400B2B1A7 /* login_username.png in Resources */,
 				BF98C6271C019D6A005281E1 /* home-man.jpg in Resources */,
@@ -326,6 +337,7 @@
 				BF2CBE111BF71456007B1BCC /* Walkthrough.storyboard in Resources */,
 				BF7F08921C0AEF0600236AD8 /* Launch Screen.storyboard in Resources */,
 				BF2CBE091BF70F48007B1BCC /* cloud1@2x.png in Resources */,
+				BF5971051C0DEAE600333A15 /* photo.png in Resources */,
 				BF8A3B1A1BFE1A5200805DF2 /* logo feeling.png in Resources */,
 				BF4893C81BF7738A00DF6EE5 /* father.png in Resources */,
 				BF4327131BFB80C900F76817 /* Backgroup.png in Resources */,

@@ -73,7 +73,7 @@ class LoginViewController: UIViewController,BWWalkthroughViewControllerDelegate{
         
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Backgroup.png")!)
         
-        initButton(loginButton)
+        initButton(loginButton,initRadius: 5.0)
         
         initImage(logoMKImage)
         //NSTimer.scheduledTimerWithTimeInterval(1.5, target: self, selector: "animateImageRipple", userInfo: nil, repeats: true)

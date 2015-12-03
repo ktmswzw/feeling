@@ -8,12 +8,16 @@
 
 import UIKit
 
+import MaterialKit
+
 class SendViewController: UIViewController {
 
+    @IBOutlet var photo: MKButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Backgroup.png")!)
+        initButton(photo,initRadius: 5.0)
+        //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Backgroup.png")!)
         // Do any additional setup after loading the view.
     }
 
