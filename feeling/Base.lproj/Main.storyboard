@@ -246,15 +246,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="至尊宝" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hrk-t4-5t1">
-                                <rect key="frame" x="20" y="28" width="522" height="30"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="lLz-03-5da"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QNh-PN-X3m" customClass="MKButton" customModule="MaterialKit">
                                 <rect key="frame" x="550" y="28" width="30" height="30"/>
                                 <animations/>
@@ -269,15 +260,65 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="至尊宝" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hrk-t4-5t1">
+                                <rect key="frame" x="20" y="28" width="522" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="lLz-03-5da"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.40000000000000002" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="8ob-Le-Les">
+                                <rect key="frame" x="200" y="343" width="200" height="200"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="nC2-q8-SbR"/>
+                                    <constraint firstAttribute="height" constant="200" id="p0J-Z7-rug"/>
+                                </constraints>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="定位中，请稍等" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="ubq-Eu-UxZ">
+                                <rect key="frame" x="20" y="314" width="560" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="经度" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSi-CV-ZZA">
+                                <rect key="frame" x="408" y="432" width="172" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="纬度" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qrr-fd-a44">
+                                <rect key="frame" x="408" y="403" width="172" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.12549019610000001" green="0.14117647059999999" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="ubq-Eu-UxZ" secondAttribute="trailing" id="2Of-1G-47L"/>
+                            <constraint firstItem="fSi-CV-ZZA" firstAttribute="centerY" secondItem="8ob-Le-Les" secondAttribute="centerY" id="AK1-dM-aVe"/>
+                            <constraint firstItem="fSi-CV-ZZA" firstAttribute="top" secondItem="qrr-fd-a44" secondAttribute="bottom" constant="8" id="Aln-30-gn1"/>
                             <constraint firstItem="hrk-t4-5t1" firstAttribute="top" secondItem="QNh-PN-X3m" secondAttribute="top" id="E1w-ra-agh"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="ubq-Eu-UxZ" secondAttribute="leading" id="Fdz-L0-X6O"/>
                             <constraint firstItem="hrk-t4-5t1" firstAttribute="top" secondItem="kLq-j6-6m2" secondAttribute="bottom" constant="8" symbolic="YES" id="HZq-AH-k3F"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fSi-CV-ZZA" secondAttribute="trailing" id="Rda-yb-vQB"/>
                             <constraint firstItem="hrk-t4-5t1" firstAttribute="leading" secondItem="t64-5k-88I" secondAttribute="leadingMargin" id="YbN-Fx-uHB"/>
+                            <constraint firstItem="kMN-tF-JBk" firstAttribute="top" secondItem="8ob-Le-Les" secondAttribute="bottom" constant="8" symbolic="YES" id="at2-Dx-d6j"/>
+                            <constraint firstItem="8ob-Le-Les" firstAttribute="top" secondItem="ubq-Eu-UxZ" secondAttribute="bottom" constant="8" symbolic="YES" id="bRh-7B-Ps5"/>
+                            <constraint firstItem="8ob-Le-Les" firstAttribute="centerX" secondItem="t64-5k-88I" secondAttribute="centerX" id="eW2-RB-KaW"/>
+                            <constraint firstItem="qrr-fd-a44" firstAttribute="leading" secondItem="8ob-Le-Les" secondAttribute="trailing" constant="8" id="eqe-3R-P74"/>
                             <constraint firstItem="QNh-PN-X3m" firstAttribute="trailing" secondItem="t64-5k-88I" secondAttribute="trailingMargin" id="fna-M7-7rW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qrr-fd-a44" secondAttribute="trailing" id="fyl-iC-0tR"/>
+                            <constraint firstItem="ubq-Eu-UxZ" firstAttribute="centerX" secondItem="t64-5k-88I" secondAttribute="centerX" id="kd2-rC-Nt4"/>
                             <constraint firstItem="QNh-PN-X3m" firstAttribute="leading" secondItem="hrk-t4-5t1" secondAttribute="trailing" constant="8" symbolic="YES" id="lQe-27-duk"/>
+                            <constraint firstItem="fSi-CV-ZZA" firstAttribute="leading" secondItem="8ob-Le-Les" secondAttribute="trailing" constant="8" id="wlk-LH-sY6"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" tag="2" title="藏匿" image="write" id="M0j-7H-5NJ" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
@@ -292,6 +333,10 @@
                     </tabBarItem>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
+                        <outlet property="address" destination="ubq-Eu-UxZ" id="ZXF-MK-3dt"/>
+                        <outlet property="latitudeLabel" destination="qrr-fd-a44" id="3T2-YG-DPN"/>
+                        <outlet property="longitudeLabel" destination="fSi-CV-ZZA" id="5Rs-ep-Hmx"/>
+                        <outlet property="mapView" destination="8ob-Le-Les" id="Pb2-kX-Tkh"/>
                         <outlet property="photo" destination="QNh-PN-X3m" id="NVq-TZ-BAG"/>
                     </connections>
                 </viewController>

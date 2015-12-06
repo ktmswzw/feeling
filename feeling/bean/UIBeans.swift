@@ -10,6 +10,8 @@ import Foundation
 import MaterialKit
 import ActionButton
 
+let APIKey = "b7725dbb85e94b01dbed216318abbc8d"
+
 func initButton(initButton: MKButton){
     initButton.cornerRadius = 30.0
     initButton.backgroundLayerCornerRadius = 30.0
