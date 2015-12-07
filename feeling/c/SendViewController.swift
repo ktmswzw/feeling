@@ -16,17 +16,14 @@ import MaterialKit
 class SendViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     let locationManager = CLLocationManager()
 
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var latitudeLabel: UILabel!
     @IBOutlet weak var longitudeLabel: UILabel!
     @IBOutlet weak var address: UILabel!
     @IBOutlet weak var mapView: MKMapView!
-    @IBOutlet var photo: MKButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        initButton(photo,initRadius: 5.0)
         //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Backgroup.png")!)
-        
         //地图初始化
         self.locationManager.delegate = self
         self.locationManager.distanceFilter = 10;

@@ -61,6 +61,25 @@
                                     </mask>
                                 </variation>
                             </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="账号" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bSq-gg-MTB" customClass="MKTextField" customModule="MaterialKit">
+                                <rect key="frame" x="200" y="242" width="200" height="40"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="166" id="8PB-uP-h6F"/>
+                                    <constraint firstAttribute="width" constant="200" id="gIm-4P-LT5"/>
+                                    <constraint firstAttribute="height" constant="40" id="rXX-pG-h3m"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="8PB-uP-h6F"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="closeKey:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="1kO-yK-I2d"/>
+                                </connections>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tje-Wd-deX" customClass="MKButton" customModule="MaterialKit">
                                 <rect key="frame" x="200" y="398" width="200" height="40"/>
                                 <animations/>
@@ -84,25 +103,6 @@
                                     <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gst-KI-yrs"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="账号" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bSq-gg-MTB" customClass="MKTextField" customModule="MaterialKit">
-                                <rect key="frame" x="200" y="242" width="200" height="40"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="166" id="8PB-uP-h6F"/>
-                                    <constraint firstAttribute="width" constant="200" id="gIm-4P-LT5"/>
-                                    <constraint firstAttribute="height" constant="40" id="rXX-pG-h3m"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="8PB-uP-h6F"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <action selector="closeKey:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="1kO-yK-I2d"/>
-                                </connections>
-                            </textField>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.16862745100000001" green="0.19215686269999999" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -171,7 +171,7 @@
                     <tabBarItem key="tabBarItem" tag="3" title="寻觅" image="search" id="MJ7-5v-PTB" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="textColor">
-                                <color key="value" name="controlDarkShadowColor" catalog="System" colorSpace="catalog"/>
+                                <color key="value" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                         <connections>
@@ -246,29 +246,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QNh-PN-X3m" customClass="MKButton" customModule="MaterialKit">
-                                <rect key="frame" x="550" y="28" width="30" height="30"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.18039215689999999" green="0.54901960780000003" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="AYI-7Q-shB"/>
-                                    <constraint firstAttribute="width" constant="30" id="aXa-iP-xG5"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="🔍">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="至尊宝" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hrk-t4-5t1">
-                                <rect key="frame" x="20" y="28" width="522" height="30"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="lLz-03-5da"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.40000000000000002" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="8ob-Le-Les">
                                 <rect key="frame" x="200" y="343" width="200" height="200"/>
                                 <animations/>
@@ -284,6 +261,29 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zVJ-Ta-ATk" customClass="MKButton" customModule="MaterialKit">
+                                <rect key="frame" x="200" y="266" width="200" height="40"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.18039215689999999" green="0.54901960780000003" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="Ql1-2c-fTG"/>
+                                    <constraint firstAttribute="width" constant="200" id="at9-eS-nIX"/>
+                                    <constraint firstAttribute="height" constant="40" id="fLV-oK-6Qe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="下一步">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Ql1-2c-fTG"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jHc-Uo-3H7"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="经度" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSi-CV-ZZA">
                                 <rect key="frame" x="408" y="432" width="172" height="21"/>
                                 <animations/>
@@ -298,26 +298,44 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <searchBar contentMode="redraw" barStyle="blackTranslucent" searchBarStyle="minimal" text="至尊宝" translatesAutoresizingMaskIntoConstraints="NO" id="Xpj-F3-4HS">
+                                <rect key="frame" x="20" y="28" width="560" height="44"/>
+                                <animations/>
+                                <offsetWrapper key="searchFieldBackgroundPositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.5" contentMode="scaleToFill" text="失去的不可找回，找回的不可替代" translatesAutoresizingMaskIntoConstraints="NO" id="7u7-Ne-P5n">
+                                <rect key="frame" x="20" y="72" width="560" height="186"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.12549019610000001" green="0.14117647059999999" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="Xpj-F3-4HS" secondAttribute="leading" id="2Ai-wi-1DU"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ubq-Eu-UxZ" secondAttribute="trailing" id="2Of-1G-47L"/>
+                            <constraint firstItem="zVJ-Ta-ATk" firstAttribute="top" secondItem="7u7-Ne-P5n" secondAttribute="bottom" constant="8" id="646-SY-zuA"/>
+                            <constraint firstItem="zVJ-Ta-ATk" firstAttribute="leading" secondItem="8ob-Le-Les" secondAttribute="leading" id="7vy-IG-EKp"/>
                             <constraint firstItem="fSi-CV-ZZA" firstAttribute="centerY" secondItem="8ob-Le-Les" secondAttribute="centerY" id="AK1-dM-aVe"/>
                             <constraint firstItem="fSi-CV-ZZA" firstAttribute="top" secondItem="qrr-fd-a44" secondAttribute="bottom" constant="8" id="Aln-30-gn1"/>
-                            <constraint firstItem="hrk-t4-5t1" firstAttribute="top" secondItem="QNh-PN-X3m" secondAttribute="top" id="E1w-ra-agh"/>
                             <constraint firstAttribute="leadingMargin" secondItem="ubq-Eu-UxZ" secondAttribute="leading" id="Fdz-L0-X6O"/>
-                            <constraint firstItem="hrk-t4-5t1" firstAttribute="top" secondItem="kLq-j6-6m2" secondAttribute="bottom" constant="8" symbolic="YES" id="HZq-AH-k3F"/>
+                            <constraint firstItem="zVJ-Ta-ATk" firstAttribute="centerX" secondItem="7u7-Ne-P5n" secondAttribute="centerX" id="GIe-1Z-Vig"/>
                             <constraint firstAttribute="trailingMargin" secondItem="fSi-CV-ZZA" secondAttribute="trailing" id="Rda-yb-vQB"/>
-                            <constraint firstItem="hrk-t4-5t1" firstAttribute="leading" secondItem="t64-5k-88I" secondAttribute="leadingMargin" id="YbN-Fx-uHB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Xpj-F3-4HS" secondAttribute="trailing" id="YLT-NQ-016"/>
                             <constraint firstItem="kMN-tF-JBk" firstAttribute="top" secondItem="8ob-Le-Les" secondAttribute="bottom" constant="8" symbolic="YES" id="at2-Dx-d6j"/>
                             <constraint firstItem="8ob-Le-Les" firstAttribute="top" secondItem="ubq-Eu-UxZ" secondAttribute="bottom" constant="8" symbolic="YES" id="bRh-7B-Ps5"/>
+                            <constraint firstItem="zVJ-Ta-ATk" firstAttribute="top" secondItem="7u7-Ne-P5n" secondAttribute="bottom" constant="8" symbolic="YES" id="ePX-wo-d2R"/>
                             <constraint firstItem="8ob-Le-Les" firstAttribute="centerX" secondItem="t64-5k-88I" secondAttribute="centerX" id="eW2-RB-KaW"/>
                             <constraint firstItem="qrr-fd-a44" firstAttribute="leading" secondItem="8ob-Le-Les" secondAttribute="trailing" constant="8" id="eqe-3R-P74"/>
-                            <constraint firstItem="QNh-PN-X3m" firstAttribute="trailing" secondItem="t64-5k-88I" secondAttribute="trailingMargin" id="fna-M7-7rW"/>
                             <constraint firstAttribute="trailingMargin" secondItem="qrr-fd-a44" secondAttribute="trailing" id="fyl-iC-0tR"/>
+                            <constraint firstItem="Xpj-F3-4HS" firstAttribute="top" secondItem="kLq-j6-6m2" secondAttribute="bottom" constant="8" id="h2C-uB-lIo"/>
                             <constraint firstItem="ubq-Eu-UxZ" firstAttribute="centerX" secondItem="t64-5k-88I" secondAttribute="centerX" id="kd2-rC-Nt4"/>
-                            <constraint firstItem="QNh-PN-X3m" firstAttribute="leading" secondItem="hrk-t4-5t1" secondAttribute="trailing" constant="8" symbolic="YES" id="lQe-27-duk"/>
+                            <constraint firstItem="ubq-Eu-UxZ" firstAttribute="top" secondItem="zVJ-Ta-ATk" secondAttribute="bottom" constant="8" symbolic="YES" id="mJp-OU-9Xu"/>
+                            <constraint firstItem="7u7-Ne-P5n" firstAttribute="top" secondItem="Xpj-F3-4HS" secondAttribute="bottom" id="sUW-d0-3LB"/>
+                            <constraint firstItem="7u7-Ne-P5n" firstAttribute="leading" secondItem="Xpj-F3-4HS" secondAttribute="leading" id="saN-WR-66F"/>
                             <constraint firstItem="fSi-CV-ZZA" firstAttribute="leading" secondItem="8ob-Le-Les" secondAttribute="trailing" constant="8" id="wlk-LH-sY6"/>
                         </constraints>
                     </view>
@@ -337,7 +355,7 @@
                         <outlet property="latitudeLabel" destination="qrr-fd-a44" id="3T2-YG-DPN"/>
                         <outlet property="longitudeLabel" destination="fSi-CV-ZZA" id="5Rs-ep-Hmx"/>
                         <outlet property="mapView" destination="8ob-Le-Les" id="Pb2-kX-Tkh"/>
-                        <outlet property="photo" destination="QNh-PN-X3m" id="NVq-TZ-BAG"/>
+                        <outlet property="searchBar" destination="Xpj-F3-4HS" id="9sT-EY-ZZG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YY0-fc-CV8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -352,7 +370,7 @@
                     </userDefinedRuntimeAttributes>
                 </customObject>
             </objects>
-            <point key="canvasLocation" x="248" y="941"/>
+            <point key="canvasLocation" x="211" y="1012"/>
         </scene>
         <!--收信-->
         <scene sceneID="yIV-jE-0cc">
@@ -436,6 +454,11 @@
                     </view>
                     <tabBarItem key="tabBarItem" tag="4" title="设定" image="setting" id="Zp4-h0-CSS" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                <color key="value" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                         <connections>
                             <outlet property="animation" destination="EDe-zG-Zv9" id="p8S-L9-CtC"/>
                         </connections>
