@@ -13,7 +13,7 @@ import CoreLocation
 
 import MaterialKit
 
-class SendViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
+class SendViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate,UISearchBarDelegate  {
     let locationManager = CLLocationManager()
 
     @IBOutlet weak var searchBar: UISearchBar!
@@ -32,6 +32,7 @@ class SendViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         self.locationManager.startUpdatingLocation()
         
         self.mapView.showsUserLocation = true
+        searchBar.showsCancelButton = true
 
         
     }
@@ -101,6 +102,27 @@ class SendViewController: UIViewController, MKMapViewDelegate, CLLocationManager
     func locationManager(manager: CLLocationManager, didFailWithError error: NSError)
     {
         print("Error: " + error.localizedDescription)
+    }
+    
+    
+    // 输入框内容改变触发事件
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        print("过滤：\(searchText)")
+    }
+    
+    // 书签按钮触发事件
+    func searchBarBookmarkButtonClicked(searchBar: UISearchBar) {
+        print("搜索历史")
+    }
+    
+    // 取消按钮触发事件
+    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+        print("取消搜索")
+    }
+    
+    // 搜索触发事件
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        print("开始搜索")
     }
 
 }

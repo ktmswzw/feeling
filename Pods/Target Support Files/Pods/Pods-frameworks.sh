@@ -84,22 +84,16 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "Pods/AIFlatSwitch.framework"
   install_framework "Pods/ActionButton.framework"
   install_framework "Pods/Alamofire.framework"
   install_framework "Pods/LTMorphingLabel.framework"
   install_framework "Pods/MaterialKit.framework"
   install_framework "Pods/RAMAnimatedTabBarController.framework"
-  install_framework "Pods/SQLite.framework"
-  install_framework "Pods/SwiftyJSON.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "Pods/AIFlatSwitch.framework"
   install_framework "Pods/ActionButton.framework"
   install_framework "Pods/Alamofire.framework"
   install_framework "Pods/LTMorphingLabel.framework"
   install_framework "Pods/MaterialKit.framework"
   install_framework "Pods/RAMAnimatedTabBarController.framework"
-  install_framework "Pods/SQLite.framework"
-  install_framework "Pods/SwiftyJSON.framework"
 fi

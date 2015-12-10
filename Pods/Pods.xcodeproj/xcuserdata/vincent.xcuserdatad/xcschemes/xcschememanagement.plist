@@ -4,11 +4,6 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>AIFlatSwitch.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>ActionButton.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -39,64 +34,8 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>SQLite.swift.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>SwiftyJSON.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
-	<dict>
-		<key>0DCBD6C869DCC15AF62D43471CB4592C</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>2112B04814E78D70792C1DC06026AF48</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>28C11D725B43487D69BA7BED1C3A1865</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>28E2DEEDE39D0A6BED56DB5A85A2CA08</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>432ECC54282C84882B482CCB4CF227FC</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>5FB0E1010439C9DF78C4E6E480FFE27E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>A7AF6E763314D4D05792E29A5B9ABDE6</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>B1349D8822B0C9DEF2C717A17F93770D</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>BA367D4FAFCCF41E77D7DBAFE08E3578</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-	</dict>
+	<dict/>
 </dict>
 </plist>
