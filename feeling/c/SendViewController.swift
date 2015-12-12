@@ -11,11 +11,13 @@ import UIKit
 import MapKit
 import CoreLocation
 
-import MaterialKit
+import MediaPlayer
+import MobileCoreServices
 
-class SendViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate,UISearchBarDelegate  {
+class SendViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UISearchBarDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate  {
     let locationManager = CLLocationManager()
 
+    @IBOutlet weak var imagePreview: UIImageView!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var latitudeLabel: UILabel!
     @IBOutlet weak var longitudeLabel: UILabel!
@@ -42,17 +44,71 @@ class SendViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
+    @IBAction func pickerImage(sender: UIButton) {
+
+    
+    
+    let alertController = UIAlertController(title: "选择照片", message: "从相机或者照片中选择", preferredStyle:UIAlertControllerStyle.ActionSheet)
+    
+    
+    let cameraAction = UIAlertAction(title: "相机", style: .Default) { (action:UIAlertAction!) in
+        
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.sourceType = UIImagePickerControllerSourceType.Camera
+        
+        //to select only camera controls, not video controls
+        imagePicker.mediaTypes = [kUTTypeImage as String]
+        imagePicker.showsCameraControls = true
+        //imagePicker.allowsEditing = true
+        self.presentViewController(imagePicker, animated: true, completion: nil)
+        
+    }
+    alertController.addAction(cameraAction)
+    
+    
+    let albumAction = UIAlertAction(title: "相册", style: .Default) { (action:UIAlertAction!) in
+        let pickerC = UIImagePickerController()
+        pickerC.delegate = self
+        self.presentViewController(pickerC, animated: true, completion: nil)
+    }
+    alertController.addAction(albumAction)
+    
+    let cancelAction = UIAlertAction(title: "取消", style: .Cancel) { (action:UIAlertAction!) in
+        print("you have pressed the Cancel button");
+    }
+    alertController.addAction(cancelAction)
+    
+    
+    self.presentViewController(alertController, animated: true, completion:{ () -> Void in
+    print("y11111");
+    })
+
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]){
+        
+        let imagePickerc = info[UIImagePickerControllerOriginalImage] as! UIImage
+        
+        imagePreview.image = imagePickerc
+        
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    
+    
+    func image(image: UIImage, didFinishSavingWithError error: NSErrorPointer, contextInfo: UnsafePointer<()>){
+        if(error != nil){
+            print("ERROR IMAGE \(error.debugDescription)")
+        }
+    }
+    
+    
+    
+    func imagePickerControllerDidCancel(picker: UIImagePickerController){
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return UIStatusBarStyle.LightContent
@@ -84,8 +140,9 @@ class SendViewController: UIViewController, MKMapViewDelegate, CLLocationManager
             }
         })
         
-        
     }
+    
+
     
     func displayLocationInfo(placemark: CLPlacemark) {
         //stop updating location to save battery life
@@ -96,7 +153,6 @@ class SendViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         if let locationName = placemark.addressDictionary!["Name"] as? NSString {
             address.text = locationName as String
         }
-        
     }
     
     func locationManager(manager: CLLocationManager, didFailWithError error: NSError)

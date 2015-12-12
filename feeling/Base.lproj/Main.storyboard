@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XYa-f4-oXi">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -253,14 +253,12 @@
                                     <constraint firstAttribute="width" constant="200" id="nC2-q8-SbR"/>
                                     <constraint firstAttribute="height" constant="200" id="p0J-Z7-rug"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="self.layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </mapView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="定位中，请稍等" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="ubq-Eu-UxZ">
-                                <rect key="frame" x="20" y="314" width="560" height="21"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="经度" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSi-CV-ZZA">
                                 <rect key="frame" x="408" y="432" width="172" height="21"/>
                                 <animations/>
@@ -281,62 +279,69 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="self.layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zVJ-Ta-ATk" customClass="MKButton" customModule="MaterialKit">
-                                <rect key="frame" x="200" y="266" width="200" height="40"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.18039215689999999" green="0.54901960780000003" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="Ql1-2c-fTG"/>
-                                    <constraint firstAttribute="width" constant="200" id="at9-eS-nIX"/>
-                                    <constraint firstAttribute="height" constant="40" id="fLV-oK-6Qe"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="下一步">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="Ql1-2c-fTG"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jHc-Uo-3H7"/>
-                                </connections>
-                            </button>
                             <searchBar contentMode="redraw" barStyle="blackTranslucent" searchBarStyle="minimal" text="至尊宝" translatesAutoresizingMaskIntoConstraints="NO" id="Xpj-F3-4HS">
                                 <rect key="frame" x="20" y="28" width="560" height="44"/>
                                 <animations/>
                                 <offsetWrapper key="searchFieldBackgroundPositionAdjustment" horizontal="0.0" vertical="0.0"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="定位中，请稍等" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="ubq-Eu-UxZ">
+                                <rect key="frame" x="20" y="314" width="560" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Smg-Bc-6fw">
+                                <rect key="frame" x="20" y="266" width="53" height="53"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="53" id="88q-K7-u1B"/>
+                                    <constraint firstAttribute="height" constant="53" id="KCg-JU-UVa"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e0g-YL-cpf">
+                                <rect key="frame" x="279" y="278" width="42" height="30"/>
+                                <animations/>
+                                <state key="normal" title="picker"/>
+                                <connections>
+                                    <action selector="pickerImage:" destination="4wJ-pg-lRr" eventType="touchUpInside" id="sFi-hU-bRP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.12549019610000001" green="0.14117647059999999" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="leadingMargin" secondItem="Xpj-F3-4HS" secondAttribute="leading" id="2Ai-wi-1DU"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ubq-Eu-UxZ" secondAttribute="trailing" id="2Of-1G-47L"/>
-                            <constraint firstItem="zVJ-Ta-ATk" firstAttribute="top" secondItem="7u7-Ne-P5n" secondAttribute="bottom" constant="8" id="646-SY-zuA"/>
-                            <constraint firstItem="zVJ-Ta-ATk" firstAttribute="leading" secondItem="8ob-Le-Les" secondAttribute="leading" id="7vy-IG-EKp"/>
+                            <constraint firstItem="ubq-Eu-UxZ" firstAttribute="top" secondItem="e0g-YL-cpf" secondAttribute="bottom" constant="6" id="7J5-Ya-vUH"/>
                             <constraint firstItem="fSi-CV-ZZA" firstAttribute="centerY" secondItem="8ob-Le-Les" secondAttribute="centerY" id="AK1-dM-aVe"/>
                             <constraint firstItem="fSi-CV-ZZA" firstAttribute="top" secondItem="qrr-fd-a44" secondAttribute="bottom" constant="8" id="Aln-30-gn1"/>
                             <constraint firstAttribute="leadingMargin" secondItem="ubq-Eu-UxZ" secondAttribute="leading" id="Fdz-L0-X6O"/>
-                            <constraint firstItem="zVJ-Ta-ATk" firstAttribute="centerX" secondItem="7u7-Ne-P5n" secondAttribute="centerX" id="GIe-1Z-Vig"/>
+                            <constraint firstItem="kMN-tF-JBk" firstAttribute="top" secondItem="Smg-Bc-6fw" secondAttribute="bottom" constant="232" id="Lhh-vO-Pv8"/>
+                            <constraint firstItem="Smg-Bc-6fw" firstAttribute="top" secondItem="7u7-Ne-P5n" secondAttribute="bottom" constant="8" symbolic="YES" id="QDt-pB-U9i"/>
                             <constraint firstAttribute="trailingMargin" secondItem="fSi-CV-ZZA" secondAttribute="trailing" id="Rda-yb-vQB"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Smg-Bc-6fw" secondAttribute="leading" id="Scr-O1-JCn"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Xpj-F3-4HS" secondAttribute="trailing" id="YLT-NQ-016"/>
                             <constraint firstItem="kMN-tF-JBk" firstAttribute="top" secondItem="8ob-Le-Les" secondAttribute="bottom" constant="8" symbolic="YES" id="at2-Dx-d6j"/>
                             <constraint firstItem="8ob-Le-Les" firstAttribute="top" secondItem="ubq-Eu-UxZ" secondAttribute="bottom" constant="8" symbolic="YES" id="bRh-7B-Ps5"/>
-                            <constraint firstItem="zVJ-Ta-ATk" firstAttribute="top" secondItem="7u7-Ne-P5n" secondAttribute="bottom" constant="8" symbolic="YES" id="ePX-wo-d2R"/>
                             <constraint firstItem="8ob-Le-Les" firstAttribute="centerX" secondItem="t64-5k-88I" secondAttribute="centerX" id="eW2-RB-KaW"/>
                             <constraint firstItem="qrr-fd-a44" firstAttribute="leading" secondItem="8ob-Le-Les" secondAttribute="trailing" constant="8" id="eqe-3R-P74"/>
                             <constraint firstAttribute="trailingMargin" secondItem="qrr-fd-a44" secondAttribute="trailing" id="fyl-iC-0tR"/>
                             <constraint firstItem="Xpj-F3-4HS" firstAttribute="top" secondItem="kLq-j6-6m2" secondAttribute="bottom" constant="8" id="h2C-uB-lIo"/>
                             <constraint firstItem="ubq-Eu-UxZ" firstAttribute="centerX" secondItem="t64-5k-88I" secondAttribute="centerX" id="kd2-rC-Nt4"/>
-                            <constraint firstItem="ubq-Eu-UxZ" firstAttribute="top" secondItem="zVJ-Ta-ATk" secondAttribute="bottom" constant="8" symbolic="YES" id="mJp-OU-9Xu"/>
+                            <constraint firstItem="e0g-YL-cpf" firstAttribute="centerX" secondItem="t64-5k-88I" secondAttribute="centerX" id="pcN-2y-R9h"/>
+                            <constraint firstItem="7u7-Ne-P5n" firstAttribute="leading" secondItem="Smg-Bc-6fw" secondAttribute="trailing" constant="-53" id="qtK-Ft-Gnd"/>
                             <constraint firstItem="7u7-Ne-P5n" firstAttribute="top" secondItem="Xpj-F3-4HS" secondAttribute="bottom" id="sUW-d0-3LB"/>
                             <constraint firstItem="7u7-Ne-P5n" firstAttribute="leading" secondItem="Xpj-F3-4HS" secondAttribute="leading" id="saN-WR-66F"/>
                             <constraint firstItem="fSi-CV-ZZA" firstAttribute="leading" secondItem="8ob-Le-Les" secondAttribute="trailing" constant="8" id="wlk-LH-sY6"/>
+                            <constraint firstItem="7u7-Ne-P5n" firstAttribute="trailing" secondItem="Xpj-F3-4HS" secondAttribute="trailing" id="xqc-wL-3c2"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" tag="2" title="藏匿" image="write" id="M0j-7H-5NJ" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
@@ -352,6 +357,7 @@
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
                         <outlet property="address" destination="ubq-Eu-UxZ" id="ZXF-MK-3dt"/>
+                        <outlet property="imagePreview" destination="Smg-Bc-6fw" id="32w-IK-nqV"/>
                         <outlet property="latitudeLabel" destination="qrr-fd-a44" id="3T2-YG-DPN"/>
                         <outlet property="longitudeLabel" destination="fSi-CV-ZZA" id="5Rs-ep-Hmx"/>
                         <outlet property="mapView" destination="8ob-Le-Les" id="Pb2-kX-Tkh"/>
