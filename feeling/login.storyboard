@@ -53,8 +53,8 @@
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="okL-5q-w2c"/>
                                         <exclude reference="0mJ-7E-A1A"/>
+                                        <exclude reference="okL-5q-w2c"/>
                                     </mask>
                                 </variation>
                             </imageView>
@@ -124,13 +124,13 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="R9b-h5-69X"/>
-                                <exclude reference="u0S-0D-F2j"/>
-                                <exclude reference="SAo-iu-wDT"/>
                                 <exclude reference="H5T-IH-gZk"/>
+                                <exclude reference="R9b-h5-69X"/>
+                                <exclude reference="SAo-iu-wDT"/>
+                                <exclude reference="u0S-0D-F2j"/>
                                 <exclude reference="vNP-bH-qWG"/>
-                                <exclude reference="y7f-RU-rZg"/>
                                 <exclude reference="r93-Od-E44"/>
+                                <exclude reference="y7f-RU-rZg"/>
                                 <exclude reference="3Zs-RR-c5D"/>
                             </mask>
                         </variation>

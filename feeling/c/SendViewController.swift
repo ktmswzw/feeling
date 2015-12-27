@@ -24,7 +24,7 @@ class SendViewController: UIViewController, MKMapViewDelegate, CLLocationManager
     @IBOutlet weak var mapView: MKMapView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Backgroup.png")!)
+        self.view.layer.contents = UIImage(named: "Backgroup.png")?.CGImage
         //地图初始化
         self.locationManager.delegate = self
         self.locationManager.distanceFilter = 10;

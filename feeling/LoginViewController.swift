@@ -19,6 +19,8 @@ class LoginViewController: UIViewController,BWWalkthroughViewControllerDelegate{
     
     var actionButton: ActionButton!
     
+    let userDefaults = NSUserDefaults.standardUserDefaults()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         NSThread.sleepForTimeInterval(0.5)
@@ -102,8 +104,6 @@ class LoginViewController: UIViewController,BWWalkthroughViewControllerDelegate{
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        let userDefaults = NSUserDefaults.standardUserDefaults()
-        
         if !userDefaults.boolForKey("walkthroughPresented") {
             
             showWalkthrough()
@@ -111,6 +111,12 @@ class LoginViewController: UIViewController,BWWalkthroughViewControllerDelegate{
             userDefaults.setBool(true, forKey: "walkthroughPresented")
             userDefaults.synchronize()
         }
+        
+        
+        if userDefaults.boolForKey("feelingLoginOK") {
+            self.performSegueWithIdentifier("login", sender: self)
+        }
+        
     }
     func bytes2String(array:[UInt8]) -> String {
         return (NSString(data: NSData(bytes: array, length: array.count), encoding: NSUTF8StringEncoding) ?? "") as String
@@ -133,9 +139,9 @@ class LoginViewController: UIViewController,BWWalkthroughViewControllerDelegate{
     
     
     @IBAction func login(sender: AnyObject) {
-         self.performSegueWithIdentifier("login", sender: self)
-//        if username.text != "" || password.text != ""
-//        {
+        
+        if username.text != "" || password.text != ""
+        {
 //
 //            Swift
 //            
@@ -150,7 +156,10 @@ class LoginViewController: UIViewController,BWWalkthroughViewControllerDelegate{
 //            let decodedData = NSData(base64EncodedString: base64String!, options: .allZeros)
 //            let decodedString = NSString(data: decodedData, encoding: NSUTF8StringEncoding)
 //            println(decodedString) // foo
-//            self.performSegueWithIdentifier("login", sender: self)
+            self.performSegueWithIdentifier("login", sender: self)
+            
+            userDefaults.setBool(true, forKey: "feelingLoginOK")
+            userDefaults.synchronize()
 //
 //            let userNameText = NSData.AES256EncryptWithPlainText(username.text)
 //            let passwordText = NSData.AES256EncryptWithPlainText(password.text)
@@ -171,15 +180,15 @@ class LoginViewController: UIViewController,BWWalkthroughViewControllerDelegate{
 //                    }
 //                }
 //            }
-//        }
-//        else
-//        {
-//            let refreshAlert = UIAlertController(title: "错误", message: "帐号密码错误", preferredStyle: UIAlertControllerStyle.ActionSheet)
-//            
-//            //refreshAlert.addAction(UIAlertAction(title: "Clear message history", style: .Destructive, handler: { (action: UIAlertAction!) in }))
-//            refreshAlert.addAction(UIAlertAction(title: "确认", style: .Cancel, handler: { (action: UIAlertAction!) in }))
-//            presentViewController(refreshAlert, animated: true, completion: nil)
-//        }
+        }
+        else
+        {
+            let refreshAlert = UIAlertController(title: "错误", message: "帐号密码错误", preferredStyle: UIAlertControllerStyle.ActionSheet)
+            
+            //refreshAlert.addAction(UIAlertAction(title: "Clear message history", style: .Destructive, handler: { (action: UIAlertAction!) in }))
+            refreshAlert.addAction(UIAlertAction(title: "确认", style: .Cancel, handler: { (action: UIAlertAction!) in }))
+            presentViewController(refreshAlert, animated: true, completion: nil)
+        }
     }
     
     @IBAction func showWalkthrough(){

@@ -13,7 +13,7 @@ class ReciveViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Backgroup.png")!)
+        self.view.layer.contents = UIImage(named: "Backgroup.png")?.CGImage
         // Do any additional setup after loading the view.
     }
 
