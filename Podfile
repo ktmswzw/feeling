@@ -2,7 +2,7 @@ platform :ios, '9.0'
 use_frameworks!
 
 #pod 'Toucan', '~> 0.4'
-pod 'RAMAnimatedTabBarController', git: 'https://github.com/Ramotion/animated-tab-bar.git'
+#pod 'RAMAnimatedTabBarController', git: 'https://github.com/Ramotion/animated-tab-bar.git'
 pod 'ActionButton'
 pod 'LTMorphingLabel', git: 'https://github.com/lexrus/LTMorphingLabel.git'
 pod 'MaterialKit', git: 'https://github.com/nghialv/MaterialKit.git'

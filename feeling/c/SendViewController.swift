@@ -14,7 +14,7 @@ import CoreLocation
 import MediaPlayer
 import MobileCoreServices
 
-class SendViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UISearchBarDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate  {
+class SendViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate,  UINavigationControllerDelegate, UIImagePickerControllerDelegate  {
     let locationManager = CLLocationManager()
 
     @IBOutlet weak var imagePreview: UIImageView!
@@ -161,24 +161,5 @@ class SendViewController: UIViewController, MKMapViewDelegate, CLLocationManager
     }
     
     
-    // 输入框内容改变触发事件
-    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
-        print("过滤：\(searchText)")
-    }
-    
-    // 书签按钮触发事件
-    func searchBarBookmarkButtonClicked(searchBar: UISearchBar) {
-        print("搜索历史")
-    }
-    
-    // 取消按钮触发事件
-    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
-        print("取消搜索")
-    }
-    
-    // 搜索触发事件
-    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
-        print("开始搜索")
-    }
 
 }

@@ -11,7 +11,7 @@ import UIKit
 import QuartzCore
 import MaterialKit
 import Alamofire
-import SwiftyJSON
+//import SwiftyJSON
 import ActionButton
 
 class LoginViewController: UIViewController,BWWalkthroughViewControllerDelegate{
@@ -71,7 +71,7 @@ class LoginViewController: UIViewController,BWWalkthroughViewControllerDelegate{
         
         initText(password,initTitle: "密码")
         
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Backgroup.png")!)
+        self.view.layer.contents = UIImage(named: "Backgroup.png")?.CGImage
         
         initButton(loginButton,initRadius: 5.0)
         
@@ -133,10 +133,10 @@ class LoginViewController: UIViewController,BWWalkthroughViewControllerDelegate{
     
     
     @IBAction func login(sender: AnyObject) {
-        
-        if username.text != "" || password.text != ""
-        {
-//            
+         self.performSegueWithIdentifier("login", sender: self)
+//        if username.text != "" || password.text != ""
+//        {
+//
 //            Swift
 //            
 //            let plainString = "foo"
@@ -150,7 +150,7 @@ class LoginViewController: UIViewController,BWWalkthroughViewControllerDelegate{
 //            let decodedData = NSData(base64EncodedString: base64String!, options: .allZeros)
 //            let decodedString = NSString(data: decodedData, encoding: NSUTF8StringEncoding)
 //            println(decodedString) // foo
-            self.performSegueWithIdentifier("login", sender: self)
+//            self.performSegueWithIdentifier("login", sender: self)
 //
 //            let userNameText = NSData.AES256EncryptWithPlainText(username.text)
 //            let passwordText = NSData.AES256EncryptWithPlainText(password.text)
@@ -171,15 +171,15 @@ class LoginViewController: UIViewController,BWWalkthroughViewControllerDelegate{
 //                    }
 //                }
 //            }
-        }
-        else
-        {
-            let refreshAlert = UIAlertController(title: "错误", message: "帐号密码错误", preferredStyle: UIAlertControllerStyle.ActionSheet)
-            
-            //refreshAlert.addAction(UIAlertAction(title: "Clear message history", style: .Destructive, handler: { (action: UIAlertAction!) in }))
-            refreshAlert.addAction(UIAlertAction(title: "确认", style: .Cancel, handler: { (action: UIAlertAction!) in }))
-            presentViewController(refreshAlert, animated: true, completion: nil)
-        }
+//        }
+//        else
+//        {
+//            let refreshAlert = UIAlertController(title: "错误", message: "帐号密码错误", preferredStyle: UIAlertControllerStyle.ActionSheet)
+//            
+//            //refreshAlert.addAction(UIAlertAction(title: "Clear message history", style: .Destructive, handler: { (action: UIAlertAction!) in }))
+//            refreshAlert.addAction(UIAlertAction(title: "确认", style: .Cancel, handler: { (action: UIAlertAction!) in }))
+//            presentViewController(refreshAlert, animated: true, completion: nil)
+//        }
     }
     
     @IBAction func showWalkthrough(){
