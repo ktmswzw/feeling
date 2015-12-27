@@ -19,6 +19,12 @@
 		BF2CBE0A1BF70F48007B1BCC /* cloud3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF2CBE021BF70F48007B1BCC /* cloud3@2x.png */; };
 		BF2CBE0F1BF713B9007B1BCC /* CustomPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2CBE0E1BF713B9007B1BCC /* CustomPageViewController.swift */; };
 		BF2CBE111BF71456007B1BCC /* Walkthrough.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF2CBE101BF71456007B1BCC /* Walkthrough.storyboard */; };
+		BF3752021C3028F4006AE9D6 /* login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF3752011C3028F4006AE9D6 /* login.storyboard */; };
+		BF3752041C302A49006AE9D6 /* send.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF3752031C302A49006AE9D6 /* send.storyboard */; };
+		BF3752071C302B21006AE9D6 /* setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF3752061C302B21006AE9D6 /* setting.storyboard */; };
+		BF3752091C302B7F006AE9D6 /* friends.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF3752081C302B7F006AE9D6 /* friends.storyboard */; };
+		BF37520B1C302BF6006AE9D6 /* recive.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF37520A1C302BF6006AE9D6 /* recive.storyboard */; };
+		BF37520D1C302C85006AE9D6 /* search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF37520C1C302C85006AE9D6 /* search.storyboard */; };
 		BF4327131BFB80C900F76817 /* Backgroup.png in Resources */ = {isa = PBXBuildFile; fileRef = BF4327121BFB80C900F76817 /* Backgroup.png */; };
 		BF4893C81BF7738A00DF6EE5 /* father.png in Resources */ = {isa = PBXBuildFile; fileRef = BF4893C51BF7738A00DF6EE5 /* father.png */; };
 		BF4893D11BF77A6900DF6EE5 /* clover.png in Resources */ = {isa = PBXBuildFile; fileRef = BF4893CF1BF77A6900DF6EE5 /* clover.png */; };
@@ -62,6 +68,12 @@
 		BF2CBE021BF70F48007B1BCC /* cloud3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cloud3@2x.png"; sourceTree = "<group>"; };
 		BF2CBE0E1BF713B9007B1BCC /* CustomPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPageViewController.swift; sourceTree = "<group>"; };
 		BF2CBE101BF71456007B1BCC /* Walkthrough.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Walkthrough.storyboard; sourceTree = "<group>"; };
+		BF3752011C3028F4006AE9D6 /* login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = login.storyboard; sourceTree = "<group>"; };
+		BF3752031C302A49006AE9D6 /* send.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = send.storyboard; sourceTree = "<group>"; };
+		BF3752061C302B21006AE9D6 /* setting.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = setting.storyboard; sourceTree = "<group>"; };
+		BF3752081C302B7F006AE9D6 /* friends.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = friends.storyboard; sourceTree = "<group>"; };
+		BF37520A1C302BF6006AE9D6 /* recive.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = recive.storyboard; sourceTree = "<group>"; };
+		BF37520C1C302C85006AE9D6 /* search.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = search.storyboard; sourceTree = "<group>"; };
 		BF4327121BFB80C900F76817 /* Backgroup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Backgroup.png; sourceTree = "<group>"; };
 		BF4893C51BF7738A00DF6EE5 /* father.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = father.png; sourceTree = "<group>"; };
 		BF4893CF1BF77A6900DF6EE5 /* clover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clover.png; sourceTree = "<group>"; };
@@ -180,6 +192,12 @@
 				BF2CBDE01BF705EB007B1BCC /* Main.storyboard */,
 				BF2CBE101BF71456007B1BCC /* Walkthrough.storyboard */,
 				BF7F08901C0AEF0600236AD8 /* Launch Screen.storyboard */,
+				BF3752011C3028F4006AE9D6 /* login.storyboard */,
+				BF3752031C302A49006AE9D6 /* send.storyboard */,
+				BF3752061C302B21006AE9D6 /* setting.storyboard */,
+				BF3752081C302B7F006AE9D6 /* friends.storyboard */,
+				BF37520A1C302BF6006AE9D6 /* recive.storyboard */,
+				BF37520C1C302C85006AE9D6 /* search.storyboard */,
 			);
 			name = storyboard;
 			sourceTree = "<group>";
@@ -327,9 +345,12 @@
 				BF2CBDE71BF705EB007B1BCC /* Assets.xcassets in Resources */,
 				BF98C6281C019D6A005281E1 /* lala.jpg in Resources */,
 				BF2CBDE21BF705EB007B1BCC /* Main.storyboard in Resources */,
+				BF3752041C302A49006AE9D6 /* send.storyboard in Resources */,
+				BF37520B1C302BF6006AE9D6 /* recive.storyboard in Resources */,
 				BF5971061C0DEAE600333A15 /* recond.png in Resources */,
 				BF2CBE051BF70F48007B1BCC /* img3@2x.png in Resources */,
 				BF9D4B8D1C0B418400B2B1A7 /* login_username.png in Resources */,
+				BF3752021C3028F4006AE9D6 /* login.storyboard in Resources */,
 				BF98C6271C019D6A005281E1 /* home-man.jpg in Resources */,
 				BF2CBE0A1BF70F48007B1BCC /* cloud3@2x.png in Resources */,
 				BF4893D11BF77A6900DF6EE5 /* clover.png in Resources */,
@@ -338,9 +359,12 @@
 				BF7F08921C0AEF0600236AD8 /* Launch Screen.storyboard in Resources */,
 				BF2CBE091BF70F48007B1BCC /* cloud1@2x.png in Resources */,
 				BF5971051C0DEAE600333A15 /* photo.png in Resources */,
+				BF37520D1C302C85006AE9D6 /* search.storyboard in Resources */,
 				BF8A3B1A1BFE1A5200805DF2 /* logo feeling.png in Resources */,
 				BF4893C81BF7738A00DF6EE5 /* father.png in Resources */,
+				BF3752091C302B7F006AE9D6 /* friends.storyboard in Resources */,
 				BF4327131BFB80C900F76817 /* Backgroup.png in Resources */,
+				BF3752071C302B21006AE9D6 /* setting.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="UlF-CW-6cr">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--登陆-->
+        <scene sceneID="fso-Kl-YvE">
+            <objects>
+                <viewController title="登陆" id="UlF-CW-6cr" customClass="LoginViewController" customModule="feeling" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9C8-Mn-GME"/>
+                        <viewControllerLayoutGuide type="bottom" id="8V2-6r-wsF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wdM-EL-jOr">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rUF-uk-DhX" customClass="MKTextField" customModule="MaterialKit">
+                                <rect key="frame" x="200" y="318" width="200" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="NaH-Dk-e88"/>
+                                    <constraint firstAttribute="width" constant="200" id="QYh-i2-gCI"/>
+                                    <constraint firstAttribute="width" constant="166" id="eUf-cz-6CL"/>
+                                    <constraint firstAttribute="height" constant="40" id="o3p-5j-KPG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="NaH-Dk-e88"/>
+                                        <exclude reference="eUf-cz-6CL"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="closeKeyP:" destination="UlF-CW-6cr" eventType="editingDidEndOnExit" id="qN1-9p-GP6"/>
+                                </connections>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NLF-0B-nkn">
+                                <rect key="frame" x="20" y="290" width="560" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="03L-WC-Mf7"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo feeling.png" translatesAutoresizingMaskIntoConstraints="NO" id="U6L-UN-gXK" customClass="MKImageView" customModule="MaterialKit">
+                                <rect key="frame" x="240" y="82" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="120" id="0mJ-7E-A1A"/>
+                                    <constraint firstAttribute="height" constant="120" id="7cB-cn-hcB"/>
+                                    <constraint firstAttribute="width" constant="120" id="okL-5q-w2c"/>
+                                    <constraint firstAttribute="width" constant="120" id="phH-nA-uyR"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="okL-5q-w2c"/>
+                                        <exclude reference="0mJ-7E-A1A"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="账号" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MZK-Xi-YFo" customClass="MKTextField" customModule="MaterialKit">
+                                <rect key="frame" x="200" y="242" width="200" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="TbF-To-S8s"/>
+                                    <constraint firstAttribute="width" constant="200" id="Xln-6x-vo2"/>
+                                    <constraint firstAttribute="width" constant="166" id="Z2o-Hu-i2v"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Z2o-Hu-i2v"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="closeKey:" destination="UlF-CW-6cr" eventType="editingDidEndOnExit" id="cwQ-IP-igt"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ba-E6-zsD" customClass="MKButton" customModule="MaterialKit">
+                                <rect key="frame" x="200" y="398" width="200" height="40"/>
+                                <color key="backgroundColor" red="0.18039215689999999" green="0.54901960780000003" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="RNt-2C-c9B"/>
+                                    <constraint firstAttribute="width" constant="200" id="bZG-YX-g9O"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="vpX-Me-3un"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="开启">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="vpX-Me-3un"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="login:" destination="UlF-CW-6cr" eventType="touchUpInside" id="oRW-4U-V2x"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.16862745100000001" green="0.19215686269999999" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="8V2-6r-wsF" firstAttribute="top" secondItem="4Ba-E6-zsD" secondAttribute="bottom" constant="8" symbolic="YES" id="3Zs-RR-c5D"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="NLF-0B-nkn" secondAttribute="leading" id="6QY-nx-xtp"/>
+                            <constraint firstItem="MZK-Xi-YFo" firstAttribute="centerX" secondItem="wdM-EL-jOr" secondAttribute="centerX" id="AJv-F9-QUD"/>
+                            <constraint firstItem="U6L-UN-gXK" firstAttribute="top" relation="lessThanOrEqual" secondItem="9C8-Mn-GME" secondAttribute="bottom" constant="41" id="H5T-IH-gZk"/>
+                            <constraint firstItem="NLF-0B-nkn" firstAttribute="top" secondItem="MZK-Xi-YFo" secondAttribute="bottom" constant="8" symbolic="YES" id="JzB-am-hGX"/>
+                            <constraint firstItem="NLF-0B-nkn" firstAttribute="centerX" secondItem="wdM-EL-jOr" secondAttribute="centerX" id="ON5-8b-hz4"/>
+                            <constraint firstItem="U6L-UN-gXK" firstAttribute="top" secondItem="9C8-Mn-GME" secondAttribute="bottom" constant="40" id="R9b-h5-69X"/>
+                            <constraint firstItem="MZK-Xi-YFo" firstAttribute="top" secondItem="U6L-UN-gXK" secondAttribute="bottom" constant="40" id="RJX-fP-KZj"/>
+                            <constraint firstItem="U6L-UN-gXK" firstAttribute="centerY" secondItem="wdM-EL-jOr" secondAttribute="centerY" id="SAo-iu-wDT"/>
+                            <constraint firstItem="NLF-0B-nkn" firstAttribute="centerY" secondItem="wdM-EL-jOr" secondAttribute="centerY" id="YwX-Gc-P8I"/>
+                            <constraint firstItem="U6L-UN-gXK" firstAttribute="centerX" secondItem="wdM-EL-jOr" secondAttribute="centerX" id="dH9-Wd-CVW"/>
+                            <constraint firstItem="rUF-uk-DhX" firstAttribute="top" secondItem="NLF-0B-nkn" secondAttribute="bottom" constant="8" symbolic="YES" id="hvJ-Xg-552"/>
+                            <constraint firstItem="rUF-uk-DhX" firstAttribute="centerX" secondItem="wdM-EL-jOr" secondAttribute="centerX" id="iTF-I7-6er"/>
+                            <constraint firstItem="4Ba-E6-zsD" firstAttribute="centerX" secondItem="wdM-EL-jOr" secondAttribute="centerX" id="oxb-9n-tX5"/>
+                            <constraint firstItem="4Ba-E6-zsD" firstAttribute="top" secondItem="rUF-uk-DhX" secondAttribute="bottom" constant="40" id="psF-WI-z2T"/>
+                            <constraint firstItem="4Ba-E6-zsD" firstAttribute="leading" secondItem="wdM-EL-jOr" secondAttribute="leadingMargin" id="r93-Od-E44"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NLF-0B-nkn" secondAttribute="trailing" id="tcY-Ge-mSl"/>
+                            <constraint firstItem="U6L-UN-gXK" firstAttribute="leading" secondItem="wdM-EL-jOr" secondAttribute="leadingMargin" constant="224" id="u0S-0D-F2j"/>
+                            <constraint firstItem="MZK-Xi-YFo" firstAttribute="top" secondItem="U6L-UN-gXK" secondAttribute="bottom" constant="61" id="vNP-bH-qWG"/>
+                            <constraint firstItem="4Ba-E6-zsD" firstAttribute="top" secondItem="9C8-Mn-GME" secondAttribute="bottom" constant="8" symbolic="YES" id="y7f-RU-rZg"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="R9b-h5-69X"/>
+                                <exclude reference="u0S-0D-F2j"/>
+                                <exclude reference="SAo-iu-wDT"/>
+                                <exclude reference="H5T-IH-gZk"/>
+                                <exclude reference="vNP-bH-qWG"/>
+                                <exclude reference="y7f-RU-rZg"/>
+                                <exclude reference="r93-Od-E44"/>
+                                <exclude reference="3Zs-RR-c5D"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <connections>
+                        <outlet property="loginButton" destination="4Ba-E6-zsD" id="lOr-gm-K1y"/>
+                        <outlet property="logoMKImage" destination="U6L-UN-gXK" id="eVp-nX-9lZ"/>
+                        <outlet property="password" destination="rUF-uk-DhX" id="Diq-u7-jou"/>
+                        <outlet property="username" destination="MZK-Xi-YFo" id="35b-SB-WQH"/>
+                        <segue destination="DGR-OY-DFs" kind="show" identifier="login" id="gxZ-Jq-Ugf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FsT-Xg-Ub7" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-437" y="170"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="ndl-BJ-N0L">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="DGR-OY-DFs" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s0e-mL-ccX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28" y="170"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo feeling.png" width="600" height="600"/>
+    </resources>
+</document>

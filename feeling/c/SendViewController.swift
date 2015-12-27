@@ -18,7 +18,6 @@ class SendViewController: UIViewController, MKMapViewDelegate, CLLocationManager
     let locationManager = CLLocationManager()
 
     @IBOutlet weak var imagePreview: UIImageView!
-    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var latitudeLabel: UILabel!
     @IBOutlet weak var longitudeLabel: UILabel!
     @IBOutlet weak var address: UILabel!
@@ -34,7 +33,6 @@ class SendViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         self.locationManager.startUpdatingLocation()
         
         self.mapView.showsUserLocation = true
-        searchBar.showsCancelButton = true
 
         
     }

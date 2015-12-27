@@ -88,12 +88,10 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods/Alamofire.framework"
   install_framework "Pods/LTMorphingLabel.framework"
   install_framework "Pods/MaterialKit.framework"
-  install_framework "Pods/RAMAnimatedTabBarController.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods/ActionButton.framework"
   install_framework "Pods/Alamofire.framework"
   install_framework "Pods/LTMorphingLabel.framework"
   install_framework "Pods/MaterialKit.framework"
-  install_framework "Pods/RAMAnimatedTabBarController.framework"
 fi
