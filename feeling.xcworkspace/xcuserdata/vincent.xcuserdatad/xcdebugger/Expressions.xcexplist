@@ -10,5 +10,13 @@
             </PersistentString>
          </PersistentStrings>
       </ContextState>
+      <ContextState
+         contextName = "ReciveViewController.(presentImagePickerSheet(ReciveViewController) -&gt; () -&gt; ()).(closure #6):ReciveViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "controller.selectedImageAssets">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
    </ContextStates>
 </VariablesViewState>

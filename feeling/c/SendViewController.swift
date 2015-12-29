@@ -14,10 +14,16 @@ import CoreLocation
 import MediaPlayer
 import MobileCoreServices
 
-class SendViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate,  UINavigationControllerDelegate, UIImagePickerControllerDelegate  {
-    let locationManager = CLLocationManager()
+import ImagePickerSheetController
 
-    @IBOutlet weak var imagePreview: UIImageView!
+class SendViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate{
+    let locationManager = CLLocationManager()
+    
+    var picker = UIImagePickerController()
+    var imageData = [UIImage]()
+    
+    
+    @IBOutlet var photoCollectionView: UICollectionView!
     @IBOutlet weak var latitudeLabel: UILabel!
     @IBOutlet weak var longitudeLabel: UILabel!
     @IBOutlet weak var address: UILabel!
@@ -33,7 +39,11 @@ class SendViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         self.locationManager.startUpdatingLocation()
         
         self.mapView.showsUserLocation = true
-
+        
+        self.photoCollectionView.delegate = self
+        self.photoCollectionView.dataSource = self
+        
+        
         
     }
 
@@ -41,72 +51,48 @@ class SendViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
-    @IBAction func pickerImage(sender: UIButton) {
-
-    
-    
-    let alertController = UIAlertController(title: "选择照片", message: "从相机或者照片中选择", preferredStyle:UIAlertControllerStyle.ActionSheet)
-    
-    
-    let cameraAction = UIAlertAction(title: "相机", style: .Default) { (action:UIAlertAction!) in
-        
-        let imagePicker = UIImagePickerController()
-        imagePicker.delegate = self
-        imagePicker.sourceType = UIImagePickerControllerSourceType.Camera
-        
-        //to select only camera controls, not video controls
-        imagePicker.mediaTypes = [kUTTypeImage as String]
-        imagePicker.showsCameraControls = true
-        //imagePicker.allowsEditing = true
-        self.presentViewController(imagePicker, animated: true, completion: nil)
-        
-    }
-    alertController.addAction(cameraAction)
-    
-    
-    let albumAction = UIAlertAction(title: "相册", style: .Default) { (action:UIAlertAction!) in
-        let pickerC = UIImagePickerController()
-        pickerC.delegate = self
-        self.presentViewController(pickerC, animated: true, completion: nil)
-    }
-    alertController.addAction(albumAction)
-    
-    let cancelAction = UIAlertAction(title: "取消", style: .Cancel) { (action:UIAlertAction!) in
-        print("you have pressed the Cancel button");
-    }
-    alertController.addAction(cancelAction)
-    
-    
-    self.presentViewController(alertController, animated: true, completion:{ () -> Void in
-    print("y11111");
-    })
-
-    }
-    
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]){
-        
-        let imagePickerc = info[UIImagePickerControllerOriginalImage] as! UIImage
-        
-        imagePreview.image = imagePickerc
-        
-        self.dismissViewControllerAnimated(true, completion: nil)
-    }
-    
-    
-    
-    func image(image: UIImage, didFinishSavingWithError error: NSErrorPointer, contextInfo: UnsafePointer<()>){
-        if(error != nil){
-            print("ERROR IMAGE \(error.debugDescription)")
+//    
+//    
+    func pickerImage() {
+        let alertController = UIAlertController(title: "选择照片", message: "从相机或者照片中选择", preferredStyle:UIAlertControllerStyle.ActionSheet)
+        let cameraAction = UIAlertAction(title: "相机", style: .Default) { (action:UIAlertAction!) in
+            
+            self.picker.sourceType = UIImagePickerControllerSourceType.Camera
+            //to select only camera controls, not video controls
+            self.picker.mediaTypes = [kUTTypeImage as String]
+            self.picker.showsCameraControls = true
+            self.picker.allowsEditing = true
+            self.presentViewController(self.picker, animated: true, completion: nil)
         }
+        alertController.addAction(cameraAction)
+        
+        
+        let albumAction = UIAlertAction(title: "相册", style: .Default) { (action:UIAlertAction!) in
+            
+            self.picker.delegate = self
+            self.presentViewController(self.picker, animated: true, completion: nil)
+        }
+        alertController.addAction(albumAction)
+        
+        let cancelAction = UIAlertAction(title: "取消", style: .Cancel) { (action:UIAlertAction!) in
+            print("you have pressed the Cancel button");
+        }
+        alertController.addAction(cancelAction)
+        
+        
+        self.presentViewController(alertController, animated: true, completion:{ () -> Void in
+        print("y11111");
+        })
+
     }
-    
-    
-    
-    func imagePickerControllerDidCancel(picker: UIImagePickerController){
-        self.dismissViewControllerAnimated(true, completion: nil)
-    }
+//
+//    
+//    func image(image: UIImage, didFinishSavingWithError error: NSErrorPointer, contextInfo: UnsafePointer<()>){
+//        if(error != nil){
+//            print("ERROR IMAGE \(error.debugDescription)")
+//        }
+//    }
+//    
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return UIStatusBarStyle.LightContent
@@ -159,5 +145,92 @@ class SendViewController: UIViewController, MKMapViewDelegate, CLLocationManager
     }
     
     
+    
+    func presentImagePickerSheet() {
+        let presentImagePickerController: UIImagePickerControllerSourceType -> () = { source in
+            let controller = UIImagePickerController()
+            controller.delegate = self
+            var sourceType = source
+            if (!UIImagePickerController.isSourceTypeAvailable(sourceType)) {
+                sourceType = .PhotoLibrary
+                print("Fallback to camera roll as a source since the simulator doesn't support taking pictures")
+            }
+            controller.sourceType = sourceType
+            
+            self.presentViewController(controller, animated: true, completion: nil)
+        }
+        
+        let controller = ImagePickerSheetController(mediaType: .ImageAndVideo)
+        controller.addAction(ImagePickerAction(title: NSLocalizedString("Take Photo Or Video", comment: "Action Title"), secondaryTitle: NSLocalizedString("Add comment", comment: "Action Title"), handler: { _ in
+            presentImagePickerController(.Camera)
+            }, secondaryHandler: { _, numberOfPhotos in
+                print("Comment \(numberOfPhotos) photos")
+        }))
+        controller.addAction(ImagePickerAction(title: NSLocalizedString("Photo Library", comment: "Action Title"), secondaryTitle: { NSString.localizedStringWithFormat(NSLocalizedString("ImagePickerSheet.button1.Send %lu Photo", comment: "Action Title"), $0) as String}, handler: { _ in
+            presentImagePickerController(.PhotoLibrary)
+            }, secondaryHandler: { _, numberOfPhotos in
+                //print("Send \(controller.selectedImageAssets)")
+                for ass in controller.selectedImageAssets
+                {
+                    let image = getAssetThumbnail(ass)
+                    self.imageData.append(image)
+                }
+                self.photoCollectionView.reloadData()
+                
+        }))
+        controller.addAction(ImagePickerAction(title: NSLocalizedString("Cancel", comment: "Action Title"), style: .Cancel, handler: { _ in
+            //print("Cancelled")
+        }))
+        
+        if UIDevice.currentDevice().userInterfaceIdiom == .Pad {
+            controller.modalPresentationStyle = .Popover
+            controller.popoverPresentationController?.sourceView = view
+            controller.popoverPresentationController?.sourceRect = CGRect(origin: view.center, size: CGSize())
+        }
+        
+        presentViewController(controller, animated: true, completion: nil)
+    }
+}
 
+
+extension SendViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return imageData.count + 1
+    }
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        //pickerImage()
+        presentImagePickerSheet()
+        //self.presentViewController(picker, animated: true, completion: nil)
+    }
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        var cell: UICollectionViewCell
+        
+        switch indexPath.row {
+            
+        case imageData.count:
+            cell = collectionView.dequeueReusableCellWithReuseIdentifier("newCell", forIndexPath: indexPath)
+        default:
+            cell = collectionView.dequeueReusableCellWithReuseIdentifier("photo", forIndexPath: indexPath)
+            let imgV = UIImageView(image: imageData[indexPath.row])
+            imgV.frame = cell.frame
+            cell.backgroundView = imgV
+        }
+        
+        return cell
+    }
+}
+
+extension SendViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        imageData.append(image)
+        photoCollectionView.reloadData()
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
 }

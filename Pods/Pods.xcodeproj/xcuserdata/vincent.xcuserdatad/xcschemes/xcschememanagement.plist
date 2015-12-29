@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>ImagePickerSheetController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>LTMorphingLabel.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,7 +42,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>41B68BCBA3765CC4DDC0FA74BB42B13A</key>
+		<key>2AAAB9973850C35994DC04473435E1A3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -48,6 +53,11 @@
 			<true/>
 		</dict>
 		<key>5FB0E1010439C9DF78C4E6E480FFE27E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>773A70E59E54306EF18F6B243BCA6948</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -1,22 +1,29 @@
 PODS:
   - ActionButton (0.1.4)
   - Alamofire (3.0.1)
+  - ImagePickerSheetController (0.9.1)
   - LTMorphingLabel (0.0.9)
   - MaterialKit (0.3.5)
 
 DEPENDENCIES:
   - ActionButton
   - Alamofire (~> 3.0.1)
+  - ImagePickerSheetController (from `https://github.com/larcus94/ImagePickerSheetController.git`)
   - LTMorphingLabel (from `https://github.com/lexrus/LTMorphingLabel.git`)
   - MaterialKit (from `https://github.com/nghialv/MaterialKit.git`)
 
 EXTERNAL SOURCES:
+  ImagePickerSheetController:
+    :git: https://github.com/larcus94/ImagePickerSheetController.git
   LTMorphingLabel:
     :git: https://github.com/lexrus/LTMorphingLabel.git
   MaterialKit:
     :git: https://github.com/nghialv/MaterialKit.git
 
 CHECKOUT OPTIONS:
+  ImagePickerSheetController:
+    :commit: 974f16b23a29811a4d56bf0357cecdfdde0ab77e
+    :git: https://github.com/larcus94/ImagePickerSheetController.git
   LTMorphingLabel:
     :commit: 1917ab7ce47764f0a7ef0dbbf7296699a5d77844
     :git: https://github.com/lexrus/LTMorphingLabel.git
@@ -27,6 +34,7 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   ActionButton: 1b94024013cf57e960d09aa56792f29e1bb545e0
   Alamofire: 2457e1b2e6c46bb05c3a598c542b7bfd08893775
+  ImagePickerSheetController: 3c58c9fee6dcf36485222358a021f6b734f997ba
   LTMorphingLabel: 4235a403f99f0e0e503389da660e0fec324549d9
   MaterialKit: 6f1e9382f89593df768bc0c31ded9952a6d8ad46
 
