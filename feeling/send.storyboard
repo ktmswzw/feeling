@@ -17,18 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.40000000596046448" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bQR-JW-qqY">
-                                <rect key="frame" x="225" y="393" width="150" height="150"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="6iX-RG-yW4"/>
-                                    <constraint firstAttribute="width" constant="150" id="Mg8-VA-ldG"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="self.layer.cornerRadius">
-                                        <integer key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </mapView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="经度" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xez-JD-NPe">
                                 <rect key="frame" x="383" y="457" width="197" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -47,26 +35,14 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jn2-Ks-PWo">
-                                <rect key="frame" x="20" y="28" width="522" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="输入或选择查看消息的对象" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jn2-Ks-PWo">
+                                <rect key="frame" x="45" y="28" width="505" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rco-mg-6Y0">
-                                <rect key="frame" x="550" y="28" width="30" height="30"/>
-                                <state key="normal" title="选择"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rco-mg-6Y0">
+                                <rect key="frame" x="558" y="28" width="22" height="30"/>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="失去的不可找回，找回的不可替代" translatesAutoresizingMaskIntoConstraints="NO" id="as2-Q2-Xwb">
-                                <rect key="frame" x="20" y="66" width="560" height="202"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="self.layer.cornerRadius">
-                                        <integer key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </textView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Yvd-EO-ufG">
                                 <rect key="frame" x="20" y="276" width="560" height="80"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -87,32 +63,25 @@
                                             <rect key="frame" x="0.0" y="0.0" width="69" height="69"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w8u-XZ-2XI">
-                                                    <rect key="frame" x="27" y="10" width="15" height="50"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="50" id="Exs-wd-1a7"/>
-                                                        <constraint firstAttribute="width" constant="15" id="tKQ-j7-WlQ"/>
-                                                    </constraints>
-                                                </view>
-                                                <view opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O2U-T2-vAg">
-                                                    <rect key="frame" x="9" y="27" width="50" height="15"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="50" id="1Ca-ay-MDU"/>
-                                                        <constraint firstAttribute="height" constant="15" id="Yss-vD-CML"/>
-                                                    </constraints>
-                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X4O-cW-fTu">
+                                                    <rect key="frame" x="23" y="14" width="22" height="42"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="centerX" secondItem="w8u-XZ-2XI" secondAttribute="centerX" id="6Sn-ya-B9T"/>
-                                            <constraint firstAttribute="centerY" secondItem="w8u-XZ-2XI" secondAttribute="centerY" id="9Ex-wq-LkY"/>
-                                            <constraint firstAttribute="centerY" secondItem="O2U-T2-vAg" secondAttribute="centerY" id="Vov-bg-l6o"/>
-                                            <constraint firstAttribute="centerX" secondItem="O2U-T2-vAg" secondAttribute="centerX" id="YmX-E7-b8g"/>
+                                            <constraint firstItem="X4O-cW-fTu" firstAttribute="centerY" secondItem="5eI-zk-ncW" secondAttribute="centerY" id="Pbh-rb-VkV"/>
+                                            <constraint firstItem="X4O-cW-fTu" firstAttribute="centerX" secondItem="5eI-zk-ncW" secondAttribute="centerX" id="URD-T3-qNC"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="self.layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="photo" id="GBg-Ov-LKA">
                                         <rect key="frame" x="79" y="6" width="69" height="69"/>
@@ -122,9 +91,47 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="self.layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="失去的不可找回，找回的不可替代" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="as2-Q2-Xwb">
+                                <rect key="frame" x="20" y="66" width="560" height="202"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="self.layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="至" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="drv-oW-j8z">
+                                <rect key="frame" x="20" y="28" width="17" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="wg7-t9-KH2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.40000000596046448" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bQR-JW-qqY">
+                                <rect key="frame" x="225" y="393" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="6iX-RG-yW4"/>
+                                    <constraint firstAttribute="width" constant="150" id="Mg8-VA-ldG"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="self.layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" red="0.12549019610000001" green="0.14117647059999999" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -133,33 +140,42 @@
                             <constraint firstItem="Xez-JD-NPe" firstAttribute="centerY" secondItem="bQR-JW-qqY" secondAttribute="centerY" id="4rZ-gu-aZl"/>
                             <constraint firstItem="as2-Q2-Xwb" firstAttribute="top" secondItem="rco-mg-6Y0" secondAttribute="bottom" constant="8" symbolic="YES" id="5zZ-b6-Yqh"/>
                             <constraint firstItem="38q-xz-JVs" firstAttribute="top" secondItem="Yvd-EO-ufG" secondAttribute="bottom" constant="8" symbolic="YES" id="6Kp-4G-pbe"/>
+                            <constraint firstItem="jn2-Ks-PWo" firstAttribute="leading" secondItem="drv-oW-j8z" secondAttribute="trailing" constant="8" id="CBs-4I-lxp"/>
                             <constraint firstItem="Yvd-EO-ufG" firstAttribute="top" secondItem="as2-Q2-Xwb" secondAttribute="bottom" constant="8" symbolic="YES" id="D3a-nF-VQK"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rco-mg-6Y0" secondAttribute="trailing" id="D6c-cN-VS2"/>
                             <constraint firstAttribute="trailingMargin" secondItem="as2-Q2-Xwb" secondAttribute="trailing" id="DJY-fN-7mQ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Xez-JD-NPe" secondAttribute="trailing" id="FBc-Kq-eoP"/>
                             <constraint firstItem="jn2-Ks-PWo" firstAttribute="top" secondItem="l9F-tJ-NbD" secondAttribute="bottom" constant="8" symbolic="YES" id="IRo-yr-XTY"/>
+                            <constraint firstItem="jn2-Ks-PWo" firstAttribute="leading" secondItem="drv-oW-j8z" secondAttribute="trailing" constant="8" symbolic="YES" id="Ps0-qC-Ovr"/>
                             <constraint firstItem="38q-xz-JVs" firstAttribute="centerX" secondItem="iSe-i0-FV8" secondAttribute="centerX" id="Tl1-oJ-z55"/>
                             <constraint firstItem="bQR-JW-qqY" firstAttribute="centerX" secondItem="iSe-i0-FV8" secondAttribute="centerX" id="Y2L-tU-Hsr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Yvd-EO-ufG" secondAttribute="trailing" id="acf-hw-Kz1"/>
+                            <constraint firstItem="drv-oW-j8z" firstAttribute="top" secondItem="l9F-tJ-NbD" secondAttribute="bottom" constant="8" symbolic="YES" id="aj1-Wr-BSi"/>
                             <constraint firstAttribute="trailingMargin" secondItem="mVn-2U-hxA" secondAttribute="trailing" id="bkx-CA-Fdc"/>
                             <constraint firstAttribute="trailingMargin" secondItem="jn2-Ks-PWo" secondAttribute="trailing" id="d3Y-7G-tgb"/>
                             <constraint firstItem="rco-mg-6Y0" firstAttribute="leading" secondItem="jn2-Ks-PWo" secondAttribute="trailing" constant="8" symbolic="YES" id="eU1-Nq-zEP"/>
                             <constraint firstItem="as2-Q2-Xwb" firstAttribute="top" secondItem="jn2-Ks-PWo" secondAttribute="bottom" constant="8" symbolic="YES" id="eg5-9D-SYG"/>
                             <constraint firstAttribute="leadingMargin" secondItem="Yvd-EO-ufG" secondAttribute="leading" id="gJF-J5-RQb"/>
+                            <constraint firstItem="drv-oW-j8z" firstAttribute="leading" secondItem="as2-Q2-Xwb" secondAttribute="leading" id="iA9-Kn-r1b"/>
                             <constraint firstAttribute="leadingMargin" secondItem="as2-Q2-Xwb" secondAttribute="leading" id="jpl-C6-6MM"/>
                             <constraint firstItem="Xez-JD-NPe" firstAttribute="top" secondItem="mVn-2U-hxA" secondAttribute="bottom" constant="8" id="kFq-eU-IGp"/>
                             <constraint firstAttribute="leadingMargin" secondItem="38q-xz-JVs" secondAttribute="leading" id="pAK-UA-dJc"/>
                             <constraint firstAttribute="leadingMargin" secondItem="jn2-Ks-PWo" secondAttribute="leading" id="pJi-yz-Vi9"/>
+                            <constraint firstItem="as2-Q2-Xwb" firstAttribute="top" secondItem="drv-oW-j8z" secondAttribute="bottom" constant="8" symbolic="YES" id="paw-W2-uMG"/>
                             <constraint firstItem="Yvd-EO-ufG" firstAttribute="leading" secondItem="38q-xz-JVs" secondAttribute="trailing" constant="-560" id="r45-zO-WTl"/>
                             <constraint firstItem="UBF-k5-2HI" firstAttribute="top" secondItem="bQR-JW-qqY" secondAttribute="bottom" constant="8" symbolic="YES" id="thB-JC-c8T"/>
                             <constraint firstAttribute="trailingMargin" secondItem="38q-xz-JVs" secondAttribute="trailing" id="thr-Bf-SOE"/>
                             <constraint firstItem="bQR-JW-qqY" firstAttribute="top" secondItem="38q-xz-JVs" secondAttribute="bottom" constant="8" symbolic="YES" id="wbV-pk-qxC"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="drv-oW-j8z" secondAttribute="leading" id="yO4-20-sH2"/>
                             <constraint firstItem="rco-mg-6Y0" firstAttribute="top" secondItem="l9F-tJ-NbD" secondAttribute="bottom" constant="8" symbolic="YES" id="zD1-DN-iAG"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rco-mg-6Y0" secondAttribute="trailing" id="zh6-LC-olb"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="yO4-20-sH2"/>
+                                <exclude reference="CBs-4I-lxp"/>
                                 <exclude reference="d3Y-7G-tgb"/>
+                                <exclude reference="pJi-yz-Vi9"/>
                                 <exclude reference="r45-zO-WTl"/>
                             </mask>
                         </variation>

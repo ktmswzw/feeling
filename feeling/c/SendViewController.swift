@@ -161,12 +161,17 @@ class SendViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         }
         
         let controller = ImagePickerSheetController(mediaType: .ImageAndVideo)
-        controller.addAction(ImagePickerAction(title: NSLocalizedString("Take Photo Or Video", comment: "Action Title"), secondaryTitle: NSLocalizedString("Add comment", comment: "Action Title"), handler: { _ in
+        controller.addAction(ImagePickerAction(title: NSLocalizedString("拍摄", comment: "标题"),handler: { _ in
             presentImagePickerController(.Camera)
             }, secondaryHandler: { _, numberOfPhotos in
-                print("Comment \(numberOfPhotos) photos")
+                for ass in controller.selectedImageAssets
+                {
+                    let image = getAssetThumbnail(ass)
+                    self.imageData.append(image)
+                }
+                self.photoCollectionView.reloadData()
         }))
-        controller.addAction(ImagePickerAction(title: NSLocalizedString("Photo Library", comment: "Action Title"), secondaryTitle: { NSString.localizedStringWithFormat(NSLocalizedString("ImagePickerSheet.button1.Send %lu Photo", comment: "Action Title"), $0) as String}, handler: { _ in
+        controller.addAction(ImagePickerAction(title: NSLocalizedString("相册", comment: "标题"), secondaryTitle: { NSString.localizedStringWithFormat(NSLocalizedString("ImagePickerSheet.button1.Send %lu Photo", comment: "Action Title"), $0) as String}, handler: { _ in
             presentImagePickerController(.PhotoLibrary)
             }, secondaryHandler: { _, numberOfPhotos in
                 //print("Send \(controller.selectedImageAssets)")
@@ -178,7 +183,7 @@ class SendViewController: UIViewController, MKMapViewDelegate, CLLocationManager
                 self.photoCollectionView.reloadData()
                 
         }))
-        controller.addAction(ImagePickerAction(title: NSLocalizedString("Cancel", comment: "Action Title"), style: .Cancel, handler: { _ in
+        controller.addAction(ImagePickerAction(title: NSLocalizedString("取消", comment: "Action Title"), style: .Cancel, handler: { _ in
             //print("Cancelled")
         }))
         
@@ -216,7 +221,9 @@ extension SendViewController: UICollectionViewDataSource, UICollectionViewDelega
             let imgV = UIImageView(image: imageData[indexPath.row])
             imgV.frame = cell.frame
             cell.backgroundView = imgV
+            cell.layer.cornerRadius = 5
         }
+        
         
         return cell
     }
