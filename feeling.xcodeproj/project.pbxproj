@@ -11,6 +11,7 @@
 		BF1852511C32A43000126383 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BF18524D1C32A43000126383 /* Localizable.strings */; };
 		BF1852521C32A43000126383 /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = BF18524F1C32A43000126383 /* Localizable.stringsdict */; };
 		BF1852551C32BCEA00126383 /* ImageUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1852541C32BCE900126383 /* ImageUtils.swift */; };
+		BF250E451C343B6E00A9933B /* UIButtonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF250E441C343B6E00A9933B /* UIButtonType.swift */; };
 		BF2CBDDD1BF705EB007B1BCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2CBDDC1BF705EB007B1BCC /* AppDelegate.swift */; };
 		BF2CBDE21BF705EB007B1BCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF2CBDE01BF705EB007B1BCC /* Main.storyboard */; };
 		BF2CBDE51BF705EB007B1BCC /* feeling.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BF2CBDE31BF705EB007B1BCC /* feeling.xcdatamodeld */; };
@@ -61,6 +62,7 @@
 		BF18524E1C32A43000126383 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = "../../../Downloads/ImagePickerSheetController-master/ImagePickerSheetController/Example/Base.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		BF1852501C32A43000126383 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = Base; path = "../../../Downloads/ImagePickerSheetController-master/ImagePickerSheetController/Example/Base.lproj/Localizable.stringsdict"; sourceTree = "<group>"; };
 		BF1852541C32BCE900126383 /* ImageUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageUtils.swift; sourceTree = "<group>"; };
+		BF250E441C343B6E00A9933B /* UIButtonType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIButtonType.swift; path = feeling/bean/UIButtonType.swift; sourceTree = "<group>"; };
 		BF2CBDD91BF705EB007B1BCC /* feeling.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = feeling.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF2CBDDC1BF705EB007B1BCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF2CBDE11BF705EB007B1BCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 		BF2CBDF11BF70DDB007B1BCC /* thirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				BF250E441C343B6E00A9933B /* UIButtonType.swift */,
 				BF82B6C01C0217660030D44A /* UICircleImageView.swift */,
 				BF82B6BE1C0215280030D44A /* UIImageColors.swift */,
 				BF8A3B1C1BFE2D7100805DF2 /* aes */,
@@ -453,6 +456,7 @@
 				BFBEBE631C04B6C8001B472C /* FriendsViewController.swift in Sources */,
 				BF4A10581BFB60A500926DD2 /* LoginViewController.swift in Sources */,
 				BF82B6BF1C0215280030D44A /* UIImageColors.swift in Sources */,
+				BF250E451C343B6E00A9933B /* UIButtonType.swift in Sources */,
 				BFBEBE611C04B45F001B472C /* ReciveViewController.swift in Sources */,
 				BF2CBDF41BF70E22007B1BCC /* BWWalkthroughPageViewController.swift in Sources */,
 				BF98C62C1C01A007005281E1 /* UIBeans.swift in Sources */,
@@ -544,7 +548,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -582,7 +586,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
