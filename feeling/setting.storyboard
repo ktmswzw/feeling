@@ -16,12 +16,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home-man.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="dzi-Ri-gIX" customClass="UICircleImageView" customModule="feeling" customModuleProvider="target">
-                                <rect key="frame" x="220" y="54" width="160" height="160"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home-man.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="dzi-Ri-gIX" customClass="UICircleImageView" customModule="feeling" customModuleProvider="target">
+                                <rect key="frame" x="250" y="28" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="160" id="L7v-td-8A9"/>
-                                    <constraint firstAttribute="width" constant="160" id="OlN-LJ-u8w"/>
-                                    <constraint firstAttribute="height" constant="160" id="Wa2-ER-UYz"/>
+                                    <constraint firstAttribute="width" constant="100" id="OlN-LJ-u8w"/>
+                                    <constraint firstAttribute="height" constant="100" id="Wa2-ER-UYz"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -33,7 +33,7 @@
                         <color key="backgroundColor" red="0.12549019610000001" green="0.14117647059999999" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="dzi-Ri-gIX" firstAttribute="centerX" secondItem="OpQ-7y-4mA" secondAttribute="centerX" id="Szm-Na-Yik"/>
-                            <constraint firstItem="dzi-Ri-gIX" firstAttribute="top" secondItem="KgS-oQ-GOT" secondAttribute="bottom" constant="34" id="fnj-Hn-CYH"/>
+                            <constraint firstItem="dzi-Ri-gIX" firstAttribute="top" secondItem="KgS-oQ-GOT" secondAttribute="bottom" constant="8" symbolic="YES" id="fnj-Hn-CYH"/>
                             <constraint firstItem="dzi-Ri-gIX" firstAttribute="centerY" secondItem="OpQ-7y-4mA" secondAttribute="centerY" id="tO6-zw-p50"/>
                         </constraints>
                         <variation key="default">

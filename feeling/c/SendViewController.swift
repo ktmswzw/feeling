@@ -24,8 +24,6 @@ class SendViewController: UIViewController, MKMapViewDelegate, CLLocationManager
     
     
     @IBOutlet var photoCollectionView: UICollectionView!
-    @IBOutlet weak var latitudeLabel: UILabel!
-    @IBOutlet weak var longitudeLabel: UILabel!
     @IBOutlet weak var address: UILabel!
     @IBOutlet weak var mapView: MKMapView!
     override func viewDidLoad() {
@@ -102,8 +100,8 @@ class SendViewController: UIViewController, MKMapViewDelegate, CLLocationManager
     {
         let location = locations.last
         
-        latitudeLabel.text =  NSString(format: "%f" , location!.coordinate.latitude) as String
-        longitudeLabel.text = NSString(format: "%f" , location!.coordinate.longitude) as String
+        //latitudeLabel.text =  NSString(format: "%f" , location!.coordinate.latitude) as String
+        //longitudeLabel.text = NSString(format: "%f" , location!.coordinate.longitude) as String
         let center = CLLocationCoordinate2D(latitude: location!.coordinate.latitude, longitude: location!.coordinate.longitude)
         let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
         

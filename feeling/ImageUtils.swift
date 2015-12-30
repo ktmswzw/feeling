@@ -21,3 +21,23 @@ func getAssetThumbnail(asset: PHAsset) -> UIImage {
     })
     return thumbnail
 }
+
+extension UIViewController {
+
+/**
+ * Called when 'return' key pressed. return NO to ignore.
+ */
+func textFieldShouldReturn(textField: UITextField) -> Bool {
+    textField.resignFirstResponder()
+    return true
+}
+
+
+/**
+ * Called when the user click on the view (outside the UITextField).
+ */
+override public func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    self.view.endEditing(true)
+}
+
+}
