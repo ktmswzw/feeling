@@ -39,5 +39,11 @@ func textFieldShouldReturn(textField: UITextField) -> Bool {
 override public func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
     self.view.endEditing(true)
 }
+//    
+//    
+//    override func viewDidLoad() {
+//        self.view.layer.contents = UIImage(named: "Backgroup.png")?.CGImage
+//        // Do any additional setup after loading the view.
+//    }
 
 }

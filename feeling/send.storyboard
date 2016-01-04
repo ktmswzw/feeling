@@ -81,22 +81,7 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.80000000000000004" contentMode="scaleToFill" text="失去的不可找回，找回的不可替代" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="as2-Q2-Xwb">
-                                <rect key="frame" x="50" y="66" width="500" height="77"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="77" id="Ob6-fu-piL"/>
-                                </constraints>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="PingFangHK-Light" family="PingFang HK" pointSize="15"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="self.layer.cornerRadius">
-                                        <integer key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="至" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="drv-oW-j8z">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="drv-oW-j8z">
                                 <rect key="frame" x="20" y="28" width="22" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="wg7-t9-KH2"/>
@@ -115,6 +100,52 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="POE-hG-TIP">
+                                <rect key="frame" x="558" y="66" width="22" height="77"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hoe-BE-063">
+                                <rect key="frame" x="20" y="66" width="22" height="77"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.80000000000000004" contentMode="scaleToFill" text="失去的不可找回，找回的不可替代" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="as2-Q2-Xwb">
+                                <rect key="frame" x="50" y="66" width="500" height="77"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="77" id="Ob6-fu-piL"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="PingFangHK-Light" family="PingFang HK" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="self.layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kYS-Nv-Eis" customClass="UIButtonTypeView" customModule="feeling" customModuleProvider="target">
+                                <rect key="frame" x="225" y="509" width="150" height="34"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="Eyk-bm-xKp"/>
+                                    <constraint firstAttribute="height" constant="34" id="I2P-PE-9sW"/>
+                                    <constraint firstAttribute="width" constant="150" id="XhV-mt-wFz"/>
+                                    <constraint firstAttribute="width" constant="60" id="cuD-GS-KIf"/>
+                                    <constraint firstAttribute="height" constant="60" id="pHk-x1-h3m"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Eyk-bm-xKp"/>
+                                        <exclude reference="cuD-GS-KIf"/>
+                                        <exclude reference="pHk-x1-h3m"/>
+                                    </mask>
+                                </variation>
+                            </button>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.40000000596046448" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bQR-JW-qqY">
                                 <rect key="frame" x="175" y="251" width="250" height="250"/>
                                 <constraints>
@@ -135,37 +166,6 @@
                                     </mask>
                                 </variation>
                             </mapView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="POE-hG-TIP">
-                                <rect key="frame" x="558" y="66" width="22" height="77"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hoe-BE-063">
-                                <rect key="frame" x="20" y="66" width="22" height="77"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kYS-Nv-Eis" customClass="UIButtonTypeView" customModule="feeling" customModuleProvider="target">
-                                <rect key="frame" x="225" y="509" width="150" height="34"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="Eyk-bm-xKp"/>
-                                    <constraint firstAttribute="height" constant="34" id="I2P-PE-9sW"/>
-                                    <constraint firstAttribute="width" constant="150" id="XhV-mt-wFz"/>
-                                    <constraint firstAttribute="width" constant="60" id="cuD-GS-KIf"/>
-                                    <constraint firstAttribute="height" constant="60" id="pHk-x1-h3m"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="Go">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="Eyk-bm-xKp"/>
-                                        <exclude reference="cuD-GS-KIf"/>
-                                        <exclude reference="pHk-x1-h3m"/>
-                                    </mask>
-                                </variation>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.12549019610000001" green="0.14117647059999999" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>

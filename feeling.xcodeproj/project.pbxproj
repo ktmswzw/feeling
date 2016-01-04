@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		7ADDE7A4FD9B3B2D679B66B0 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4FD577FD2D17B405A5CBF19 /* Pods.framework */; };
-		BF1852511C32A43000126383 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BF18524D1C32A43000126383 /* Localizable.strings */; };
-		BF1852521C32A43000126383 /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = BF18524F1C32A43000126383 /* Localizable.stringsdict */; };
 		BF1852551C32BCEA00126383 /* ImageUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1852541C32BCE900126383 /* ImageUtils.swift */; };
 		BF250E451C343B6E00A9933B /* UIButtonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF250E441C343B6E00A9933B /* UIButtonType.swift */; };
 		BF2CBDDD1BF705EB007B1BCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2CBDDC1BF705EB007B1BCC /* AppDelegate.swift */; };
@@ -37,6 +35,8 @@
 		BF5971041C0DEAE600333A15 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = BF5971011C0DEAE600333A15 /* camera.png */; };
 		BF5971051C0DEAE600333A15 /* photo.png in Resources */ = {isa = PBXBuildFile; fileRef = BF5971021C0DEAE600333A15 /* photo.png */; };
 		BF5971061C0DEAE600333A15 /* recond.png in Resources */ = {isa = PBXBuildFile; fileRef = BF5971031C0DEAE600333A15 /* recond.png */; };
+		BF76D3541C3A627E000D8A28 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BF76D3521C3A627E000D8A28 /* Localizable.strings */; };
+		BF76D3551C3A627E000D8A28 /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = BF76D3531C3A627E000D8A28 /* Localizable.stringsdict */; };
 		BF7F08921C0AEF0600236AD8 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF7F08901C0AEF0600236AD8 /* Launch Screen.storyboard */; };
 		BF82B6BD1C02102A0030D44A /* Toucan.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF82B6BC1C02102A0030D44A /* Toucan.swift */; };
 		BF82B6BF1C0215280030D44A /* UIImageColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF82B6BE1C0215280030D44A /* UIImageColors.swift */; };
@@ -59,8 +59,6 @@
 		4AFBD15C6B5ED9AC69BBF9E5 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		8F790CA15CCABC42ED398577 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		B4FD577FD2D17B405A5CBF19 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BF18524E1C32A43000126383 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = "../../../Downloads/ImagePickerSheetController-master/ImagePickerSheetController/Example/Base.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		BF1852501C32A43000126383 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = Base; path = "../../../Downloads/ImagePickerSheetController-master/ImagePickerSheetController/Example/Base.lproj/Localizable.stringsdict"; sourceTree = "<group>"; };
 		BF1852541C32BCE900126383 /* ImageUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageUtils.swift; sourceTree = "<group>"; };
 		BF250E441C343B6E00A9933B /* UIButtonType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIButtonType.swift; path = feeling/bean/UIButtonType.swift; sourceTree = "<group>"; };
 		BF2CBDD91BF705EB007B1BCC /* feeling.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = feeling.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,6 +88,8 @@
 		BF5971011C0DEAE600333A15 /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
 		BF5971021C0DEAE600333A15 /* photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo.png; sourceTree = "<group>"; };
 		BF5971031C0DEAE600333A15 /* recond.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = recond.png; sourceTree = "<group>"; };
+		BF76D3521C3A627E000D8A28 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		BF76D3531C3A627E000D8A28 /* Localizable.stringsdict */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.stringsdict; path = Localizable.stringsdict; sourceTree = "<group>"; };
 		BF7F08911C0AEF0600236AD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Launch Screen.storyboard"; sourceTree = "<group>"; };
 		BF82B6BC1C02102A0030D44A /* Toucan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Toucan.swift; path = feeling/Toucan.swift; sourceTree = "<group>"; };
 		BF82B6BE1C0215280030D44A /* UIImageColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageColors.swift; sourceTree = "<group>"; };
@@ -141,8 +141,8 @@
 		BF18524C1C32A42100126383 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				BF18524D1C32A43000126383 /* Localizable.strings */,
-				BF18524F1C32A43000126383 /* Localizable.stringsdict */,
+				BF76D3521C3A627E000D8A28 /* Localizable.strings */,
+				BF76D3531C3A627E000D8A28 /* Localizable.stringsdict */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -377,9 +377,9 @@
 				BF37520B1C302BF6006AE9D6 /* recive.storyboard in Resources */,
 				BF5971061C0DEAE600333A15 /* recond.png in Resources */,
 				BF2CBE051BF70F48007B1BCC /* img3@2x.png in Resources */,
-				BF1852511C32A43000126383 /* Localizable.strings in Resources */,
+				BF76D3541C3A627E000D8A28 /* Localizable.strings in Resources */,
 				BF9D4B8D1C0B418400B2B1A7 /* login_username.png in Resources */,
-				BF1852521C32A43000126383 /* Localizable.stringsdict in Resources */,
+				BF76D3551C3A627E000D8A28 /* Localizable.stringsdict in Resources */,
 				BF3752021C3028F4006AE9D6 /* login.storyboard in Resources */,
 				BF98C6271C019D6A005281E1 /* home-man.jpg in Resources */,
 				BF2CBE0A1BF70F48007B1BCC /* cloud3@2x.png in Resources */,
@@ -477,22 +477,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		BF18524D1C32A43000126383 /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BF18524E1C32A43000126383 /* Base */,
-			);
-			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
-		BF18524F1C32A43000126383 /* Localizable.stringsdict */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BF1852501C32A43000126383 /* Base */,
-			);
-			name = Localizable.stringsdict;
-			sourceTree = "<group>";
-		};
 		BF2CBDE01BF705EB007B1BCC /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
