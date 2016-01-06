@@ -23,6 +23,7 @@ class SendViewController: UIViewController, MKMapViewDelegate, CLLocationManager
     var imageData = [UIImage]()
     
     
+    @IBOutlet var limitDate: UITextField!
     @IBOutlet var photoCollectionView: UICollectionView!
     @IBOutlet weak var address: UILabel!
     @IBOutlet weak var mapView: MKMapView!
@@ -182,7 +183,7 @@ class SendViewController: UIViewController, MKMapViewDelegate, CLLocationManager
                 
         }))
         controller.addAction(ImagePickerAction(title: NSLocalizedString("取消", comment: "Action Title"), style: .Cancel, handler: { _ in
-            //print("Cancelled")
+            //print("Cancelled")
         }))
         
         if UIDevice.currentDevice().userInterfaceIdiom == .Pad {
@@ -192,6 +193,18 @@ class SendViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         }
         
         presentViewController(controller, animated: true, completion: nil)
+    }
+    
+    
+    @IBAction func pickDate(sender: AnyObject) {
+        DatePickerDialog().show("DatePickerDialog", doneButtonTitle: "Done", cancelButtonTitle: "Cancel", datePickerMode: .Date) {
+            (date) -> Void in
+            
+            let dateFormatter2 = NSDateFormatter()
+            dateFormatter2.dateFormat = "yyyy-MM-dd"
+            // Date 转 String
+            self.limitDate.text = dateFormatter2.stringFromDate(date)
+        }
     }
 }
 

@@ -49,6 +49,7 @@
 		BF9D4B8D1C0B418400B2B1A7 /* login_username.png in Resources */ = {isa = PBXBuildFile; fileRef = BF9D4B8B1C0B418400B2B1A7 /* login_username.png */; };
 		BF9D4B8E1C0B418400B2B1A7 /* login_password.png in Resources */ = {isa = PBXBuildFile; fileRef = BF9D4B8C1C0B418400B2B1A7 /* login_password.png */; };
 		BF9D748C1BFDF8E1004545CE /* NSData+AES256.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9D748B1BFDF8E1004545CE /* NSData+AES256.m */; };
+		BFB9F6DD1C3D3B5300736919 /* DatePickerDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB9F6DC1C3D3B5300736919 /* DatePickerDialog.swift */; };
 		BFBEBE5D1C04B3FB001B472C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBEBE5C1C04B3FB001B472C /* SearchViewController.swift */; };
 		BFBEBE5F1C04B416001B472C /* SendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBEBE5E1C04B416001B472C /* SendViewController.swift */; };
 		BFBEBE611C04B45F001B472C /* ReciveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBEBE601C04B45F001B472C /* ReciveViewController.swift */; };
@@ -103,6 +104,7 @@
 		BF9D4B8C1C0B418400B2B1A7 /* login_password.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_password.png; sourceTree = "<group>"; };
 		BF9D74891BFDF8E0004545CE /* feeling-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "feeling-Bridging-Header.h"; sourceTree = "<group>"; };
 		BF9D748B1BFDF8E1004545CE /* NSData+AES256.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+AES256.m"; sourceTree = "<group>"; };
+		BFB9F6DC1C3D3B5300736919 /* DatePickerDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerDialog.swift; sourceTree = "<group>"; };
 		BFBEBE5C1C04B3FB001B472C /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = c/SearchViewController.swift; sourceTree = "<group>"; };
 		BFBEBE5E1C04B416001B472C /* SendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SendViewController.swift; path = c/SendViewController.swift; sourceTree = "<group>"; };
 		BFBEBE601C04B45F001B472C /* ReciveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReciveViewController.swift; path = c/ReciveViewController.swift; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 		BF2CBDF11BF70DDB007B1BCC /* thirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				BFB9F6DC1C3D3B5300736919 /* DatePickerDialog.swift */,
 				BF250E441C343B6E00A9933B /* UIButtonType.swift */,
 				BF82B6C01C0217660030D44A /* UICircleImageView.swift */,
 				BF82B6BE1C0215280030D44A /* UIImageColors.swift */,
@@ -342,6 +345,7 @@
 				TargetAttributes = {
 					BF2CBDD81BF705EB007B1BCC = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = Y2WV2W9E5J;
 					};
 				};
 			};
@@ -455,6 +459,7 @@
 			files = (
 				BFBEBE631C04B6C8001B472C /* FriendsViewController.swift in Sources */,
 				BF4A10581BFB60A500926DD2 /* LoginViewController.swift in Sources */,
+				BFB9F6DD1C3D3B5300736919 /* DatePickerDialog.swift in Sources */,
 				BF82B6BF1C0215280030D44A /* UIImageColors.swift in Sources */,
 				BF250E451C343B6E00A9933B /* UIButtonType.swift in Sources */,
 				BFBEBE611C04B45F001B472C /* ReciveViewController.swift in Sources */,
@@ -584,11 +589,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = feeling/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xecoder.feeling;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "feeling-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -601,11 +608,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = feeling/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xecoder.feeling;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "feeling-Bridging-Header.h";
 			};
 			name = Release;
